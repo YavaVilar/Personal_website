@@ -8,11 +8,11 @@ website:
   open-graph: true
   navbar:
       right:
-      - icon: github
-        href: https://github.com/YavaVilar
-      - icon: linkedin
-        href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
-      left:
+      #- icon: github
+        #href: https://github.com/YavaVilar
+      #- icon: linkedin
+        #href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
+      #left:
       - href: academic works.qmd
 
 page-footer:
