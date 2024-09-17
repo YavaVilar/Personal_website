@@ -1,0 +1,25 @@
+---
+title: "Yava Vilar Valera"
+image: "foto gradu.png"
+about:
+  template: trestles
+  links:
+    - icon: github
+      href: https://github.com/YavaVilar
+    - icon: linkedin
+      href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
+---
+
+::: column-page
+## About me
+
+My name is Yava Vilar Valera.
+
+I was born in Valencia, Spain. I grew up in Navaluenga, a small village in the province of Avila, Spain. I later moved to Belgium where I lived for three years and where I learnt french. Then, I returned to Valencia, where, in 2020, I began my Degree in Economics at the [Universitat de València](https://www.uv.es/). Two years later I enrolled in an International Double Degree program with [Nantes Université](https://www.univ-nantes.fr/), through which I obtained my Bachelor's degree in Economics from both universities in 2024.
+
+Currently I am pursuing a Master's degree in [Econometrics and Statistics](https://sites.google.com/view/master-ecap/accueil) at Nantes University, focusing on applied econometrics and data science.
+
+I define myself as a very passionate and motivated student, with a strong willingness to learn and achieve my goals. Not only do I enjoy answering questions of social and economic nature, but also writing, languages, and engaging in thorough and creative work.
+
+You can find a version of my CV here.
+:::

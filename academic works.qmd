@@ -1,0 +1,13 @@
+---
+title: "Academic works"
+listing:
+  contents: posts
+  #categories: true
+  date-format: "DD MMM YYYY"
+  sort: "date desc"
+  type: grid
+  image-height: 300px
+  #filter-ui: true
+page-layout: full
+title-block-banner: true
+---

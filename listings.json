@@ -1,0 +1,27 @@
+[
+  {
+    "listing": "/about.html",
+    "items": [
+      "/posts/Nepal thesis/Nepal project.html",
+      "/posts/welcome/Spanish economy.html",
+      "/posts/post-with-code/index.html"
+    ]
+  },
+  {
+    "listing": "/experience.html",
+    "items": [
+      "/experiences/International experience/International Double Degree.html"
+    ]
+  },
+  {
+    "listing": "/academic works.html",
+    "items": [
+      "/posts/Nepal thesis/Nepal project.html",
+      "/posts/prévision et conjocture/prev et conj.html",
+      "/posts/Séries temp Dorota/Séries temp.html",
+      "/posts/Ressources et guerres/Ressources et guerres.html",
+      "/posts/spanish economy/Spanish economy.html",
+      "/posts/essay EH2/index.html"
+    ]
+  }
+]

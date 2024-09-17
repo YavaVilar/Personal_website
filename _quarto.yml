@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: .
+
+website:
+  title: "Academic blog"
+  twitter-card: true
+  open-graph: true
+  navbar:
+      right:
+      - icon: github
+        href: https://github.com/YavaVilar
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
+      left:
+      - href: academic works.qmd
+
+page-footer:
+    left:
+      - href: https://www.quarto.org
+        text: Built with Quarto
+
+format:
+  html:
+    theme: [litera, styles.css]
+    highlight-style: nord
+
+execute:
+  freeze: auto
+editor: visual
+

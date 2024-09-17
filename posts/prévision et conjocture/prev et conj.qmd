@@ -1,0 +1,12 @@
+---
+title: "Prévision et conjocture: Evolution de la population espagnole, 1277-1838"
+image: "pop in Spain.jpg"
+author: Yava Vilar Valera
+date: 04/30/2024
+---
+
+This is a piece of work I did for my "Prévision et Conjoncture" course, where I learned several models and techniques to make future predictions about any variable. These models include Holt-Winters, CES (S)ARIMA and ADAM-ETS models. I was interested in understanding population dynamics and chose Spain as the territory to analyze. I assessed the accuracy of the different models and ultimately used the one that provided the lowest error rate when forecasting. Even though I focused on and made predictions on historical data (1277-1838), the same methodology can be extrapolated to current values. R was the software I used to manage the data.
+
+<object data="prev et conj.pdf" type="application/pdf" width="100%" height="100%" style="min-height:50vh;">
+
+</object>

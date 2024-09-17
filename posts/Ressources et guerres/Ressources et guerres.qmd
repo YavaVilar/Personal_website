@@ -1,0 +1,14 @@
+---
+title: "Mémoire L3: Ressources naturelles et guerres civiles"
+image: "guerres.jpg"
+author: Yava Vilar Valera
+date: 06/03/2023
+---
+
+The link between natural resources and civil wars is a central topic in the study of contemporary conflicts. In many regions, the abundance of resources such as petroleum, minerals, wood, or diamonds has been both a blessing and a curse. While in theory these resources should boost economic development, in practice they have provoked prolonged internal conflicts. Wars tend to intensify around this wealth, as armed groups seek to finance their operations through exploitation of these resources. Similarly, extreme climate events, such as extended droughts, can aggravate tensions by increasing competition for scarce and essential goods like water and arable land.
+
+I studied this relationship in my research document in the third grade of my degree in Economics, written in French. To do this, I based my project on two papers that I synthesized: "Le rôle des ressources naturelles dans les conflits armés africains" by Philippe Hugon (2009) and "Drought and civil war in Sub-Saharan Africa" by Mathieu Couttenier and Raphael Soubeyran (2013).
+
+<object data="mini-mémoire L3.pdf" type="application/pdf" width="100%" height="100%" style="min-height:50vh;">
+
+</object>
