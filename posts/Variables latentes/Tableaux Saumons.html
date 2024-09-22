@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Yava Vilar Valera">
-<meta name="dcterms.date" content="2024-06-03">
+<meta name="author" content="Jasmine Dupau, Yava Vilar Valera">
+<meta name="dcterms.date" content="2024-03-15">
 
-<title>Yava Vilar Valera - M1 Dissertation: Assessing the Impact of the Nepal 2015 Gorkha Earthquake on Children Health</title>
+<title>Yava Vilar Valera - Verification of salmon authenticity using the PLS-DA method</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,13 +63,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Yava Vilar Valera - M1 Dissertation: Assessing the Impact of the Nepal 2015 Gorkha Earthquake on Children Health">
+<meta property="og:title" content="Yava Vilar Valera - Verification of salmon authenticity using the PLS-DA method">
 <meta property="og:description" content="">
-<meta property="og:image" content="children Nepal.jpg">
+<meta property="og:image" content="jsm-sea-fish.jpg">
 <meta property="og:site-name" content="Yava Vilar Valera">
-<meta name="twitter:title" content="Yava Vilar Valera - M1 Dissertation: Assessing the Impact of the Nepal 2015 Gorkha Earthquake on Children Health">
+<meta name="twitter:title" content="Yava Vilar Valera - Verification of salmon authenticity using the PLS-DA method">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="children Nepal.jpg">
+<meta name="twitter:image" content="jsm-sea-fish.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">M1 Dissertation: Assessing the Impact of the Nepal 2015 Gorkha Earthquake on Children Health</h1>
+      <h1 class="title">Verification of salmon authenticity using the PLS-DA method</h1>
                       </div>
   </div>
     
@@ -127,14 +127,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Yava Vilar Valera </p>
+               <p>Jasmine Dupau, Yava Vilar Valera </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 3, 2024</p>
+        <p class="date">March 15, 2024</p>
       </div>
     </div>
     
@@ -150,12 +150,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-the-project" id="toc-about-the-project" class="nav-link active" data-scroll-target="#about-the-project">About the project</a></li>
-  <li><a href="#research-statement-and-study-framework" id="toc-research-statement-and-study-framework" class="nav-link" data-scroll-target="#research-statement-and-study-framework">1. Research Statement and Study Framework</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">2. Data</a></li>
-  <li><a href="#econometric-methodology" id="toc-econometric-methodology" class="nav-link" data-scroll-target="#econometric-methodology">3. Econometric methodology</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">4. Results</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">5. Conclusion</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#descriptive-analysis" id="toc-descriptive-analysis" class="nav-link" data-scroll-target="#descriptive-analysis">1. Descriptive analysis</a></li>
+  <li><a href="#pls-da-model" id="toc-pls-da-model" class="nav-link" data-scroll-target="#pls-da-model">2. PLS-DA Model</a></li>
+  <li><a href="#performance-evaluation" id="toc-performance-evaluation" class="nav-link" data-scroll-target="#performance-evaluation">2. Performance evaluation</a></li>
+  <li><a href="#the-most-discriminating-and-interesting-chemical-elements-to-keep" id="toc-the-most-discriminating-and-interesting-chemical-elements-to-keep" class="nav-link" data-scroll-target="#the-most-discriminating-and-interesting-chemical-elements-to-keep"><strong>3.</strong> The most discriminating and interesting chemical elements to keep&nbsp;</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -165,39 +165,129 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="about-the-project" class="level3">
-<h3 class="anchored" data-anchor-id="about-the-project">About the project</h3>
-<p>For the dissertation of my first year in the Master’s program, I inquired about the consequences that the 2015 Gorkha earthquake in Nepal had on children’s health, and more specifically, on cough prevalence. Nepal is an underdeveloped country where many children still do not have access to decent and dignified living conditions, while earthquakes can aggravate these issues. I was highly motivated to conduct research on this topic and to apply the econometric tools I had recently acquired in the Master.</p>
-<p>Data cleaning, management, and analysis were major parts of the project. I worked with DHS (Demographic and Health Surveys) data files, using RStudio and Stata as the main statistical software. The literature review and writing of the paper completed the task. Below you can find a summary of the study framework, the data and methodology employed, and the main findings of the study, which have been summarized from the sixty pages I originally wrote.</p>
+<p>This a project we made on the PLS-DA (Partial Least Squares Discriminant Analysis) technique, a method used to classify data into groups. This approach is particularly helpful when dealing with datasets that have many variables, especially when it is necessary to separate the data into different categories. The technique works by creating latent variables, which are new variables that summarize the most relevant information from the original data. We applied this method in the context of verifying salmon authenticity, as demonstrated below.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The objective of our study is to find a predictive model of salmon authenticity on the dataset from the publication “Data fusion and multivariate analysis for food authenticity analysis.” written by Hong, Y., Birse, N., Quinn, B., Li, Y., Jia, W., McCarron, P., … &amp; Elliott, C. T. in 2023. The initial dataset contains information on the 38-element chemical composition of 521 salmon from four different countries. However, elements present in extremely high quantities or too low to be measured accurately were removed from the dataset before further analysis, leaving only 20 chemical elements. Similarly, the values of these elements were normalized on a scale of 0 to 1.</p>
+<p>We decided to apply the PLS-DA (Partial Least Squares regression Discriminant Analysis) approach. This method consists in classifying individuals according to the categories of the qualitative variable Y (the origin of the salmon in our study), in a discriminating manner by finding the best possible latent variables, these being combinations of the predictors and the qualitative variable. Moreover, this approach seems particularly interesting in this analysis given that some of the chemical elements (explanatory variables) show strong multicollinearity between them, making multinomial regression inviable. To start our study, we perform a preliminary descriptive analysis to better understand the relationships between the variables and the structure of our dataset. Next, the PLS-DA model will be explored by looking for latent components or variables, with cross-validation to assess the performance of the PLS-DA model. To do this, we first set up a training sample, made up of 80% of our population, and a test sample with the remaining 20% to analyze the quality of the prediction. The model will be considered of good quality if it has a low error rate, i.e.&nbsp;when the majority of salmon rankings are validated.</p>
 </section>
-<section id="research-statement-and-study-framework" class="level3">
-<h3 class="anchored" data-anchor-id="research-statement-and-study-framework">1. Research Statement and Study Framework</h3>
-<p>Earthquakes, being one of the most devastating natural phenomena on Earth, can cause great damage to human health, fostering, in addition to numerous emotional damages, the emergence of diseases. Among them, cough can reduce the quality of life of those who suffer from it, and its frequency in the population may increase after an earthquake, given the resulting dust and pollution, the loss of economic means and the worsening of the quality and quantity of clinical services available, among others. Children under five represent a group of individuals in society who are particularly susceptible to diseases, while their physical and emotional well-being is essential for their development as individuals. The analysis seeks to identify the extent of damage caused, in terms of prevalence of childhood coughing, by the 2015 Nepal Gorkha earthquake.</p>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">2. Data</h3>
-<p>In the study, Demographic and Health Surveys datasets are utilized, a set of nationally representative surveys that collect information on health and demographics in developing countries. Conducted by ICF International and funded primarily by the United States Agency for International Development (USAID), these surveys address topics such as infant mortality, nutrition, reproductive health, and family planning, providing detailed and internationally comparable information. DHS contain several data files for different family members, such as woman, man, children, and households. In the analysis, children and households’ files regarding the country of Nepal for the years 2011 (5,038 observations) and 2016 (5,306 observations) are managed. Additionally, geographic coordinates of each surveyed household were required to compute distances to the earthquake’s epicentres, a key aspect of the research. Geospatial data have also been included to specify control variables in the model.</p>
-</section>
-<section id="econometric-methodology" class="level3">
-<h3 class="anchored" data-anchor-id="econometric-methodology">3. Econometric methodology</h3>
-<p>The Difference-in-Differences is employed as empirical strategy, an econometric technique used to estimate the causal effect of an intervention or policy by comparing changes in outcomes over time between a treatment group, made up of units who receive the intervention, and a control group that serves as counterfactual for treated individuals (i.e.&nbsp;what would have happened to the treatment group in the absence of the intervention). In this case, the earthquake is interpreted as the intervention. Therefore, we consider that individuals under the treatment are children living in areas close to epicentres, whereas the control set is composed of children who live in remote areas. I have measured the impact on cough prevalence considering as treated the children living within a wide range of kilometres of either of the two epicentres (Gorkha district on 15 April, 7,8 magnitude; and Dolakha district, on 12 may, 7,3 magnitude), with the remaining area of the country as control units, the main results of which will be shown below. The mathematical equation is presented next:</p>
-<p>Y<em>it</em> = α + d = α + β1𝑇𝑟𝑒𝑎𝑡𝑚𝑒𝑛𝑡𝑖 + β2𝑃𝑜𝑠𝑡𝑡 + β3 (Treatment ∗ Post) 𝑖𝑡 + β4X𝑖𝑡 + β5D𝑖𝑡</p>
-<p>Where 𝑌 reflects the outcome of interest (cough prevalence) for individual 𝑖 at time 𝑡; α is a constant; β the coeƯicient of each correspondent variable; 𝑇𝑟𝑒𝑎𝑡𝑚𝑒𝑛𝑡 indicates whether the child belongs to the treatment area (1 if that is the case, 0 otherwise); and 𝑃𝑜𝑠𝑡 takes the value 1 if individuals belong to the post-earthquake group, 0 if not. X corresponds to a set of control variables and D represents region fixed effects. Finally, ϵ is the error term.</p>
-</section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results">4. Results</h3>
-<p>Findings have demonstrated a significant impact up to a distance of 80 kilometers. Table 1 presents the estimates obtained from the above equation considering this distance range. β3 , the coefficient corresponding to the variable <em>Treatment*After</em>, is the DiD estimator which measures the causal effect of the treatment. Its significance at the 10% threshold indicates a significant difference, over the two periods analysed, in the cough rate in the areas affected by the earthquake relative to non-affected regions. The positiveness of the sign indicates that being within 80 kilometers of in the post-treatment group increases the likelihood of coughing compared to the remaining areas.</p>
-<div class="quarto-figure quarto-figure-center">
+<section id="descriptive-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="descriptive-analysis">1. Descriptive analysis</h3>
+<p>As introduced, descriptive analysis is an essential step prior to any type of work on a database. We begin by projecting a histogram of the dependent qualitative variable “Class”, which indicates the country of origin of each salmon, available in Figure 1. In addition, the origin of these fish is distributed according to the two different production methods.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1: Salmon by country and production method</p>
+<div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="images/clipboard-374487154.png" class="img-fluid figure-img" width="325"></p>
+<p><img src="images/clipboard-1846701600.png" class="img-fluid figure-img" width="566"></p>
 </figure>
 </div>
-<p>Figure 1 shows the evolution of cough prevalence in both treatment and control groups from the year 2001. We can observe how the cough incidence index, measured from 0 to 1 as a proportion of the sample analysed, has decreased for both groups in the ten years prior to the earthquake, although it increased slowly in 2011 relative to 2006. After the shock in 2015, the proportion of children suffering from the disease goes up, even if not in a very pronounced way, for treated children. The control region, on the contrary, slightly lowers its cough incidence. The groups compared do not perfectly exhibit parallel trends during the pre-earthquake period, although they are high similar. Even though covariates have been included in the model, possibly they would not have followed an exactly parallel evolution in the absence of treatment, and this could represent some source of little bias in the results. Figure 2 exhibits a map of Nepal showing the two major epicenters as well as the households surveyed who have been found to be injured by the earthquake.</p>
-<p><img src="images/clipboard-2667512190.png" class="img-fluid" width="679"></p>
+<p>Looking at the distribution of this variable, we can see that farmed salmon are the most represented, with the Scottish and Norwegian countries alone recording almost 300 salmon, accompanied by 90 Irish salmon. Wild-caught salmon, represented by Alaska and Ireland, are in the minority, with overall numbers hovering around 150 salmon, or half the number of the other production method.</p>
+<p>Next, we find it interesting to understand this distribution through the analysis of chemical elements, which will enable us to highlight the particularities of each country. To do this, we decided to represent the distribution of each chemical element with boxplots in Figure 2.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2: Statistical distribution of chemical elements</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3794984116.png" class="img-fluid figure-img" width="543"></p>
+</figure>
+</div>
+<p>We observe that a group of variables made up of “Al”, “Cr”, “Cu”, “Fe”, “Co”, “Mn”, “Mo”, “Ni”, “Sr” and “V” show very distant points. After analysis, the salmon from the fishery meet these characteristics. Alaskan salmon, for example, are very rich in copper, molybdenum and nickel. Icelandic salmon are also highly concentrated in iron, strontium and vanadium.</p>
+<p>Finally, analysis of the relationships between predictors using correlation calculations informs us that a number of variables are strongly positively correlated with each other, such as “Zn” and “Se”, “Se” and “Rb” or “Rb” and “Cs”. This strong collinearity reinforces the use of PLS-DA regression in this study.</p>
+</section>
+<section id="pls-da-model" class="level3">
+<h3 class="anchored" data-anchor-id="pls-da-model">2. PLS-DA Model</h3>
+<p>Before performing the classification, we split the database into a training set, with 80% of all observations, and a test set, with the remaining 20% of observations. First, the PLS-DA model was run on the training set using the MixOmics library. For dimension reduction, we selected the 20 initial components, corresponding to the 20 predictors, which helped us to visualize and identify the most appropriate number of components to minimize the classification error rate while resulting in a parsimonious model. Parsimony suggests that, among models that are equally effective at explaining or predicting data, the one that is simplest or uses the fewest variables is preferred. This translates into the search for models that perform well, but are no more complex than necessary. Model simplicity can help avoid over-fitting, when a model over-fits training data and has difficulty generalizing to new data. Figure 3 shows the classification error rate as a function of the number of components or dimensions. The error rate decreases significantly up to dimension 5, with a value equal to 0.06, then increases slightly and decreases again insignificantly. We would have to enlarge up to component 18 to find an error value smaller than that provided by dimension 5, however, this does not seem appropriate given the relevance of the parsimony criterion.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3: Classification error rate as a function of the number of components</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1361032355.png" class="img-fluid figure-img" width="552"></p>
+</figure>
+</div>
+<p>On the other hand, Figure 4 shows the salmon rankings performed on five dimensions. We can see that only individuals 98 and 25, belonging to Alaskan, failed to group correctly. We can also see that the Norway, Scotland and Iceland-F groups do not have a clear separation, which could mislead the prediction.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4: PLS-DA on five dimensions</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1936891644.png" class="img-fluid figure-img" width="517"></p>
+</figure>
+</div>
+</section>
+<section id="performance-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="performance-evaluation">2. Performance evaluation</h3>
+<p>The test sample was then used to check the model’s performance. The “overall”, “max.dist”, “centroids.dist” and “mahalanobis.dist” metrics are commonly used, with distinct performance measurement methods, to assess the quality of the PLS-DA model in terms of its ability to distinguish different groups. We select the “max.dist” metric as it stands out from the other metrics for its objective of maximizing the separation between classes, which is a key criterion in our study for achieving a clear distinction between them. In addition, in Figure 5 it provides the ideal number of components described above. This distance metric reveals an accuracy rate of 0.95 and an error rate of 0.049.</p>
+<p>Similarly, a confusion matrix was run on Table 1 to visualize the distribution of salmon between their initial classes and those predicted by the model. Only one salmon was predicted for Norway and one for Scotland while belonging to the Iceland-F class, and three salmon for Scotland while belonging to Norway. These results confirm the model’s ability to distinguish between classes and its accuracy. This is confirmed by Figure 5, which shows the ROC (Recieving Operating Characteristic) curve. Indeed, all the lines corresponding to the different classes provide information on the quality of the specificity and sensitivity indices, which are very good in view of the very high curves, also indicating AUC values close to 1.</p>
+<table class="table">
+<caption>Tabe 1: Confusion matrix PLS-DA</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th>Alaskan</th>
+<th>Iceland-F</th>
+<th>Iceland-W</th>
+<th>Norway</th>
+<th>Scotland</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alaskan</td>
+<td><strong>19</strong></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Iceland-F</td>
+<td>0</td>
+<td><strong>9</strong></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Iceland-W</td>
+<td>0</td>
+<td>0</td>
+<td><strong>18</strong></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Norway</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td><strong>18</strong></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Scotland</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td><strong>35</strong></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 5: ROC Curve</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1771343391.png" class="img-fluid figure-img" width="521"></p>
+</figure>
+</div>
+</section>
+<section id="the-most-discriminating-and-interesting-chemical-elements-to-keep" class="level3">
+<h3 class="anchored" data-anchor-id="the-most-discriminating-and-interesting-chemical-elements-to-keep"><strong>3.</strong> The most discriminating and interesting chemical elements to keep&nbsp;</h3>
+<p>Finally, we identify the important variables for class prediction by studying their weights on all five components.</p>
+<p>In Figure 6, we can see that the most discriminating chemical elements, with an error rate of 6%, are, in order of importance, boron, lithium, cadium, carbon monoxide, selenium, iron and caesium.&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 6: Variables contribution to components</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4205849119.png" class="img-fluid figure-img" width="457"></p>
+</figure>
+</div>
 </section>
 <section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">5. Conclusion</h3>
-<p>In conclusion, the study has analysed the impact that the 2015 Gorkha earthquake of Nepal had on the prevalence of cough in children under five. For that, groups close to epicenters have been compared to the remaining regions of the country over time. Results have revealed an increase in the rate of the disease in areas within a circle of up to 80 kilometers of any of the two major epicenters. Given the frequency of earthquakes in Nepal and its low buildings construction quality, it is recommended to invest in resistant material to these hazards. Likewise, the importance of counting with health services and qualified professionals after such an event is highlighted. Children are the future of society, and their care is crucial for their development and happiness.</p>
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>To conclude, the study consisted in predicting the geographical origin of the salmon in the database using PLS-DA regression. Before applying the prediction model, we carried out a univariate descriptive analysis of our qualitative variable “Class”, which enabled us to observe the distribution of the four countries to be discriminated and to discover which production mode was most represented. We then proceeded with the five-component PLS-DA analysis, built on the training set with the “max.dist” metric. We obtained a high-performance model with good predictive quality, presenting an AUC close to 1 for each group to be discriminated, accompanied by a very low error rate of 4%. The chemical elements that emerged as the most discriminating were lithium, boron, iron, carbon monoxide, selenium, cadmium and cesium. However, class separation was not very clear-cut. Similarly, it would have been interesting to perform a discriminant factor analysis (DFA) to compare and complete our interpretation of the discriminating power of the predictors.</p>
 
 
 </section>

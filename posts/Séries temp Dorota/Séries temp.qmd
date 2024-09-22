@@ -1,11 +1,11 @@
 ---
-title: "Séries temporelles: Analyse du taux de mortalité des moins de cinq ans au cours du temps au Népal"
+title: "Time Series : Analysis of the Mortality Rate of Children in Nepal, 1960-2020"
 image: "image série temp.png"
 author: Yava Vilar Valera
 date: 04/19/2024
 ---
 
-In the first year of my Master's in Econometrics, I took a course on time series, specifically focusing on ARIMA models, a technique used to analyze data over time and forecast values based on past information. I was particularly interested in analyzing the evolution of under-five mortality in Nepal. To do this, I downloaded data from the World Bank, where I found the mortality rate starting from 1960 onwards. In my work, I explained the foundations of the methodology employed, the Box-Jenkins technique, as well as the theory behind ARIMA models, to identify a model that fits the data and provides the best possible forecasts. Likewise, I studied the relationship between the under-five mortality rate and two of its potential determinants: the fertility rate and the GDP per capita level.
+In the first year of my Master's in Econometrics, I took a course on time series, specifically revolving about ARIMA models, which are used to analyze data over time and forecast values based on past information. The evolution of under-five mortality in Nepal caught my attention. I downloaded data from the World Bank, where I found the mortality rate from 1960 onwards. In my work, I explained the foundations of the methodology employed, the Box-Jenkins technique, as well as the theory behind ARIMA models, to identify a model that fits the data and provides the best possible forecasts. Likewise, I studied the relationship between the under-five mortality rate and two of its potential determinants: the fertility rate and the GDP per capita level.
 
 <object data="Séries temporelles dossier.pdf" type="application/pdf" width="100%" height="100%" style="min-height:50vh;">
 
