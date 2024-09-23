@@ -1,7 +1,7 @@
 ---
 title: "Essay: The Spanish Uneven Industrialization and Regional Inequality"
 image: "industralizacion spain.jpg"
-author: Yava Vilar Valera
+author: Vilar Valera Yava
 date: 12/03/2021
 ---
 
@@ -11,7 +11,7 @@ In my second year of studying Economics, I wrote a short essay for the Economic 
 
 ### Essay
 
-Industrialization in Spain, whose origin dates to the first decades of the 19th century, represented a decisive point in the contemporary history of the country in terms of regional inequalities. Different studies have shown that the beginning of every modern economic growth spreads unevenly across space, affecting a few regions in a first instance and then increasing inequality (Williamson, 1965). Graph 1 shows this has been the Spanish case. Data provided by A.Carreras and X.Tafunell (2021) has been collected that analyse the trajectory of inequalities in terms of GDP per capita of the Spanish regions from the beginning of industrialization to its peak. For this, they have used the Gini index, an economic indicator that measures the level of inequality, ranging from zero (maximum uniformity) to one (maximum concentration). In it an ascending index is observed from the beginning of the 19th century until 1940.
+Industrialization in Spain, whose origin dates to the first decades of the 19th century, represented a decisive point in the contemporary history of the country in terms of regional inequalities. Different studies have shown that the beginning of every modern economic growth spreads unevenly across space, affecting a few regions in a first instance and then increasing inequality (Williamson, 1965). Figure 1 shows this has been the Spanish case. Data provided by A.Carreras and X.Tafunell (2021) has been collected that analyse the trajectory of inequalities in terms of GDP per capita of the Spanish regions from the beginning of industrialization to its peak. For this, they have used the Gini index, an economic indicator that measures the level of inequality, ranging from zero (maximum uniformity) to one (maximum concentration). In it an ascending index is observed from the beginning of the 19th century until 1940.
 
 ```{r, echo=FALSE}
 library(ggplot2)
@@ -24,14 +24,14 @@ df <- data.frame(Años = factor(años), Valores = valores)
 # Crear el gráfico de línea
 ggplot(df, aes(x = Años, y = Valores, group = 1)) +  # Agregar group = 1 para líneas con variables categóricas
   geom_line(color = "darkgray", linewidth = 1) +  # Gráfico de línea
-  labs(title = "Graph 1: Regional Inequality Index, 1797-1940",
+  labs(title = "Figure 1: Regional Inequality Index, 1797-1940",
        x = "Date",
        y = "Index") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-Catalonia and in a lesser extent the Basque Country were the leading regions that led the beginning of industrialization, while most of the rest of Spain faced various obstacles that prevented a rapid resurgence of this sector. As we can see in graph 2, in which the three richest and most disadvantaged provinces have been selected in 1900 according to their nominal GDP per capita (NCDGP), Barcelona, Guipúzcoa and Vizcaya are the provinces found in the three first places. At the other extreme we find Cáceres, León and Lugo. With these figures, the differences between "rich" and "poor" are very appreciable.
+Catalonia and in a lesser extent the Basque Country were the leading regions that led the beginning of industrialization, while most of the rest of Spain faced various obstacles that prevented a rapid resurgence of this sector. As we can see in Figure 2, in which the three richest and most disadvantaged provinces have been selected in 1900 according to their nominal GDP per capita (NCDGP), Barcelona, Guipúzcoa and Vizcaya are the provinces found in the three first places. At the other extreme we find Cáceres, León and Lugo. With these figures, the differences between "rich" and "poor" are very appreciable.
 
 ```{r, echo=FALSE}
 ciudades <- c("Barcelona", "Guipuzcoa", "Vizcaya", "León", "Ourense", "Lugo")
@@ -43,7 +43,7 @@ df1 <- data.frame(ciudades = ciudades, Valores = valores1)
 bp <- barplot(df1$Valores, 
         names.arg = df1$ciudades, 
         col = "skyblue", 
-        main = "Nominal GDP per capita in 1900", 
+        main = "Figure 2: Nominal GDP per capita in 1900", 
         xlab = "Province", 
         ylab = "Value", 
         las = 2)
@@ -52,7 +52,7 @@ bp <- barplot(df1$Valores,
 text(x = bp, y = df1$Valores - 0.3, labels = df1$Valores, pos = 1, cex = 0.8, col = "black")
 ```
 
- Catalonia is a region that rapidly became a powerful textile industry in the eighteenth century. On the contrary, in that same century, in the whole of Spain livestock and farming “represented around 70% of the total production” (Llombart, 2013) and it remained mainly agrarian until mid-twentieth century. Why was practically only this region able to catch-up with the main European industrial powers? Before such a revolution, it was a very agrarian society as the rest of Spain. However, along the eighteenth century it experienced social and economic changes, a phenomenon rigorously studied by P.Vilar in his work "La Catalogne dans l'Espagne moderne", in which the foundations of the economic splendor experienced in the 19th century are set. On the one hand, the demographic increase is relevant. According to data provided by Jordi Nadal (1992), population went from being made up of 508,000 inhabitants in 1717 to 899,531 in 1787. From this, a growth rate of 77.07%1 is deducted. If we compare it with data on the growth of the whole Spain between these two dates, 7,500000 and 10,541.2000 respectively (Nadal, 1975), with a resulting growth rate of 38.79%, we can see that Catalan population has grown to a greater extent in relation to Spain, participating thus in the European demographic boom. This favorable boom for the Catalan economy was accompanied by an increase in agricultural productivity, especially in the vine sector, favored, among others, by the introduction of new irrigation techniques and the limitation of fallow land due to the use of natural fertilizers.
+Catalonia is a region that rapidly became a powerful textile industry in the eighteenth century. On the contrary, in that same century, in the whole of Spain livestock and farming “represented around 70% of the total production” (Llombart, 2013) and it remained mainly agrarian until mid-twentieth century. Why was practically only this region able to catch-up with the main European industrial powers? Before such a revolution, it was a very agrarian society as the rest of Spain. However, along the eighteenth century it experienced social and economic changes, a phenomenon rigorously studied by P.Vilar in his work "La Catalogne dans l'Espagne moderne", in which the foundations of the economic splendor experienced in the 19th century are set. On the one hand, the demographic increase is relevant. According to data provided by Jordi Nadal (1992), population went from being made up of 508,000 inhabitants in 1717 to 899,531 in 1787. From this, a growth rate of 77.07%1 is deducted. If we compare it with data on the growth of the whole Spain between these two dates, 7,500000 and 10,541.2000 respectively (Nadal, 1975), with a resulting growth rate of 38.79%, we can see that Catalan population has grown to a greater extent in relation to Spain, participating thus in the European demographic boom. This favorable boom for the Catalan economy was accompanied by an increase in agricultural productivity, especially in the vine sector, favored, among others, by the introduction of new irrigation techniques and the limitation of fallow land due to the use of natural fertilizers.
 
 Not only there was an intensive growth, also the cultivated areas increased. “With the exception, perhaps, of Cerdanya, there is no 'country' or region of the Principality of which some text from the 18th century does not indicate a more or less marked progress in the area under cultivation \[...\] no region of some importance in the Catalan economic complex escaped this 18th century agricultural renovation" (Vilar,1962). With this information available and considering the Cobb-Douglas production function, it does not seem surprising that Catalonia participated in the process of modern economic growth. The rest of Spain, on the other hand, only managed to grow sparsely at an extensive level throughout 19th century, especially after Madoz disentailment- a liberal measure established in 1854 that disentailed land from communal properties- due to a land breaking process (Nadal, 1975).
 

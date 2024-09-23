@@ -1,7 +1,7 @@
 ---
 title: "Verification of salmon authenticity using the PLS-DA method"
 image: "jsm-sea-fish.jpg"
-author: Jasmine Dupau, Yava Vilar Valera
+author: Dupau Jasmine, Vilar Valera Yava
 date: "2024-03-15"
 ---
 

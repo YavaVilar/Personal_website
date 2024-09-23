@@ -1,0 +1,14 @@
+---
+title: "R & Python"
+listing:
+  contents: R
+  #categories: false
+  date-format: "DD MMM YYYY"
+  sort: "date desc"
+  type: table
+  #filter-ui: false
+page-layout: full
+#title-block-banner: true
+---
+
+This section offers some of my learning on data management using R, as well as on data visualization in Python.

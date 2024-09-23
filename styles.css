@@ -15,7 +15,7 @@ $font-size-base:              1.1rem !default;
 }
 
 .dropdown-text {
-  color: "#000000";
+  color: "#FFFFFF";
 }
 
 // Typography
@@ -42,19 +42,27 @@ a:hover {
     text-decoration: none;
 }
 
+//** Global textual link color.
+$link-color:            #E2402E !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link decoration.
+$link-decoration: none;
+$link-hover-decoration: none;
+
 $code-block-bg: #2B2423;
 
 .navbar {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .navbar-title {
-  color: #darkred;
+  color: #FFFFFF;
   font-family: "Crimson Text";
 }
 
 a.sidebar-item-text.sidebar-link {
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .navbar li.dropdown-header {
@@ -68,13 +76,3 @@ a.sidebar-item-text.sidebar-link {
 .quarto-listing-category-title {
     font-family: "Crimson Text";
 }
-
-
-//** Global textual link color.
-$link-color:            #E2402E !default;
-//** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
-//** Link decoration.
-$link-decoration: none;
-$link-hover-decoration: none;
-

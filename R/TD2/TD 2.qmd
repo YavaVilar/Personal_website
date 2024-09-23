@@ -1,0 +1,351 @@
+---
+title: "Analyzing Olympic Games Paris 2024: Fonctions in R"
+date: "03/02/2024"
+author: Yava Vilar Valera
+toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, warning=FALSE, errors=FALSE, message=FALSE, results=TRUE, fig.width=8, fig.height=6)
+```
+
+The aim of these exercises is to implement functions for analyzing historical data relating to the Olympic Games. With the functions generated, we'll be able to exploit information such as the number of medals won by each athlete during their participation in the program, the nationalities most represented at the Olympic Games and much more!
+
+-   **Run the following command. What does the object contain?**
+
+```{r}
+
+library(rvest)
+library(purrr)
+
+list_tables <-
+  session("https://fr.wikipedia.org/wiki/Liste_des_m%C3%A9daill%C3%A9s_olympiques") |>
+  html_elements(".wikitable") |>
+  html_table()
+```
+
+The object contains a list with 6 elements containing different databases.
+
+-   **We're interested in the first table. Create an object entitledédata_medailles_sport_ete containing the first element of list_tables. The table is not well formatted. Delete the first column, the column names and the first row. Rename columns to c(“Discipline”, “Annees”, “Editions”, “Epreuves_2020”, “Or”, “Argent”, “Bronze”, “Total”, “Athletes_medailles”, “Athletes_or”). The “Editions”, “Epreuves_2020”, “Or”, “Argent”, “Bronze” and “Total” columns will be converted into integer columns.**
+
+```{r}
+#Créer data_medailles_sport_ete contenant la première table de la liste 
+
+data_medailles_sport_ete <- list_tables[[1]]
+
+# Supprimer la première colonne, les noms de colonnes et la première ligne
+
+data_medailles_sport_ete <- data_medailles_sport_ete[-1,-1]
+colnames(data_medailles_sport_ete) <- NULL
+
+# Renommer des colonnes 
+
+colnames(data_medailles_sport_ete) <-  c("Discipline", "Annees", "Editions",
+  "Epreuves_2020", "Or", "Argent", "Bronze", "Total", "Athletes_medailles",
+  "Athletes_or")
+
+#Coder en integer 
+
+data_medailles_sport_ete[, 3:8] <- lapply(data_medailles_sport_ete[, 3:8], as.integer)
+
+```
+
+-   **The 3 disciplines with the most medals awarded**
+
+```{r}
+library(tidyverse)
+library(dplyr)
+
+#Option avec le tidyverse
+
+Top3_disciplines <- data_medailles_sport_ete |> arrange(desc(Total)) |> slice(1:3)
+
+Top3_disciplines
+
+#Une autre option avec la fct orderet regarder les 3 premiers
+
+order(data_medailles_sport_ete$Total, decreasing=TRUE)
+
+
+```
+
+Athletics, swimming and wrestling are the three disciplines with the most medals distributed.
+
+-   **The 3 disciplines with the fewest events in 2020**
+
+```{r}
+data_medailles_sport_ete_ordonne_epreuves2020 <- data_medailles_sport_ete |> arrange(Epreuves_2020) |> slice(1:3)
+data_medailles_sport_ete_ordonne_epreuves2020 ##Sélectionner les 3 dernières
+
+```
+
+Soccer, golf and handball were the disciplines with the fewest events in 2020.
+
+-   **Calculate a function since which represents since which year the edition is on the program**
+
+```{r}
+calcul_nb_editions_int <- function(depuis){
+  annee <- 2020
+  int <- 4
+  x <- ((annee-depuis)/4)+1
+  if (depuis<1916){
+    nb_ed <- x-3
+    nb_ed
+  }
+  if(depuis>1916){
+    nb_ed <- x-2
+    nb_ed
+  }
+  if(depuis>1944){
+    nb_ed <- x
+    nb_ed
+  }
+  nb_ed
+}
+
+#Exemple d'utilisation
+calcul_nb_editions_int(1992)
+
+
+```
+
+-   **Propose a new function calcul_nb_editions_str, this time taking strings as input.**
+
+```{r}
+calcul_nb_editions_str <- function(x){
+  
+  z <- str_split(x,",",simplify = TRUE)
+  r <- as.matrix(ifelse(!grepl("depuis|-",z),"P",z))
+  # permet de compter le nombre de valeur unique pour l'année 
+  
+  res_annee <- 0
+  res_depuis <- 0
+  res_tiret <- 0
+  
+  calcul_nb_editions_int <- function(depuis){
+    annee <- 2020
+    int <- 4
+    x <- ((annee-depuis)/4)+1
+    if (depuis<1916){
+      nb_ed <- x-3
+      nb_ed
+    }
+    if(depuis>1916){
+      nb_ed <- x-2
+      nb_ed
+    }
+    if(depuis>1944){
+      nb_ed <- x
+      nb_ed
+    }
+    return(nb_ed)
+  }
+  
+  calcul_nb_editions_interne  <- function(deb,fi){
+    
+    int <- 4
+    x <- ((fi-deb)/4)+1
+    if (fi < 1916 & deb < 1916){
+      nb_ed <- x
+      nb_ed
+    }
+    if (deb < 1916 & fi < 1944){
+      nb_ed <- x-1
+      nb_ed
+    }
+    if (deb < 1916 & fi> 1944){
+      nb_ed <- x-3
+      nb_ed
+    }
+    if(deb>1916 & fi < 1944){
+      nb_ed <- x
+      nb_ed
+    }
+    if(deb > 1916 & fi > 1944){
+      nb_ed <- x-2
+      nb_ed
+    }
+    
+    if (deb > 1944 & fi > 1944){
+      nb_ed <- x
+      nb_ed
+    }
+    
+    return(nb_ed)
+  }
+  
+  
+  for (j in 1:nrow(r)) {
+    if (any(str_detect(r[j, 1], "-"))) {
+      e <- sapply(str_split(r[j, 1], "-"), as.integer)
+      debut <- e[1, 1]
+      fin <- e[2, 1]
+      res_tiret <- calcul_nb_editions_interne(debut, fin)
+    }
+    
+    if (any(str_detect(r[j, 1], "depuis"))) {
+      d <- as.integer(str_extract_all(r[j, 1], "\\d+"))
+      res_depuis <- calcul_nb_editions_int(d)
+    }
+    
+    if(is.character(r[j, 1])){
+      sp <- str_detect(r,"P")
+      res_annee <- sum(sp)  # premier cas de fonction 
+    }
+  }
+  
+  resultat <- sum(res_depuis, res_tiret, res_annee)
+  return(resultat)
+}
+
+#Exemple d'utilisation
+calcul_nb_editions_str("1896, 1904, depuis 1920")
+```
+
+-   **Generic function calcul_nb_editions and two implementations calcul_nb_editions.integer and calcul_nb_editions.character**
+
+```{r}
+# Définition de la fonction génerique
+calcul_nb_editions <- function(x) {
+  UseMethod("calcul_nb_editions")
+}
+
+#Fonction integer
+
+calcul_nb_editions.integer <- function(x) {
+  nb_participations <- length(unique(x))
+  return(nb_participations)
+}
+
+calcul_nb_editions.numeric <- function(x) {
+  # Vérifier si x est entier
+  if (x == floor(x)) {
+    return(calcul_nb_editions.integer(as.integer(x)))
+  } else {
+    stop("La méthode n'est définie que pour les entiers")
+  }
+}
+
+#Fonction caractère
+
+calcul_nb_editions.character <- function(x) {
+  annee_actuelle <- as.integer(format(Sys.Date(), "%Y"))
+  annees <- unlist(str_extract_all(x, "\\b\\d{4}\\b"))
+  depuis_annees <- as.integer(unlist(str_extract_all(x, regex("(?<=depuis )\\d{4}", ignore_case = TRUE)))) 
+  
+  plages <- str_extract_all(x, "\\d{4}–\\d{4}")
+  plages <- unlist(plages)
+  for (plage in plages) {
+    annees_debut_fin <- as.integer(unlist(str_extract_all(plage, "\\d{4}")))
+    annees <- c(annees, seq(annees_debut_fin[1], annees_debut_fin[2], by = 4))
+  }
+
+  for (depuis_annee in depuis_annees) {
+    annees_depuis <- seq(depuis_annee, annee_actuelle, by = 4)
+    annees <- c(annees, annees_depuis)
+  }
+  nb_editions <- length(unique(as.integer(annees)))
+  
+  return(nb_editions)
+}
+
+```
+
+**Results:**
+
+```{r}
+calcul_nb_editions(2000)
+calcul_nb_editions("1904–1924, depuis 1948")
+```
+
+The result of the first calculation of the function is equal to 1 and the result of the second calculation is equal to 26.
+
+-   **Function calcul_medailles_individuelles, which determines the maximum number of medals an athlete has won in each Olympiad.**
+
+```{r}
+calcul_medailles_individuelles <- function(athletes_medailles) {
+  # Dataframe pour stocker les résultats
+  resultats_df <- data.frame(Athlete = character(), TotalMedailles = integer(), stringsAsFactors = FALSE)
+  
+  # Séparation des athlètes
+  athletes_details <- strsplit(athletes_medailles, "\\)\\s*(?=[A-Z])", perl = TRUE)[[1]]
+  
+  for (detail in athletes_details) {
+    detail <- gsub("[()]", "", detail) # Nettoyer la chaîne
+    name_medals_parts <- strsplit(detail, "\\s(?=\\d+-\\d+-\\d+)", perl = TRUE)[[1]] # 
+    
+  #Séparer le nom des médailles
+    
+    if (length(name_medals_parts) < 2) next
+    
+    athlete_name <- name_medals_parts[1]
+    medals_info <- strsplit(name_medals_parts[2], "-")[[1]]
+    total_medals <- sum(as.integer(medals_info))
+    
+    resultats_df <- rbind(resultats_df, data.frame(Athlete = athlete_name, TotalMedailles = total_medals, stringsAsFactors = FALSE))
+  }
+  
+  return(resultats_df)
+}
+
+#Exemple d'utilisation
+calcul_medailles_individuelles("Paavo Nurmi (FIN) (9-3-0)")
+```
+
+-   **Top 3 athletes**
+
+```{r}
+# On applique la fonction précédemment créée calcul_medailles_individuelles
+liste_df <- lapply(data_medailles_sport_ete$Athletes_medailles, calcul_medailles_individuelles)
+
+# Un seul dataframe
+df_athletes_medailles <- do.call(rbind, liste_df)
+
+# On sélectionne les trois premiers athlètes
+top_3_athletes <- head(df_athletes_medailles[order(-df_athletes_medailles$TotalMedailles),], 3)
+
+top_3_athletes
+```
+
+The top 3 athletes were Michael Phelps, Larissa Latynina and Edoardo Mangiarotti with a total of 28, 18 and 13 medals respectively.
+
+-   **The 3 most represented nationalities, for all events, in the ranking of individual gold medals won**
+
+```{r}
+
+extraire_nationalite_athlete <- function(texte) {
+  # Extraire les morceaux contenant la nationalité et les médailles d'or
+  matches <- gregexpr("\\([A-Z]{3}\\) \\((\\d+)-", texte)
+  nationalites_et_or <- regmatches(texte, matches)
+  
+  # Vecteur pour les nationalités
+  nationalites <- vector("list", length(nationalites_et_or[[1]]))
+  
+  for(i in seq_along(nationalites_et_or[[1]])) {
+    match <- nationalites_et_or[[1]][i]
+    nationalite <- substr(match, 2, 4) # Extraire la nationalité
+    or <- as.numeric(substr(match, 8, nchar(match)-1)) # Extraire le nombre de médailles d'or
+    
+    if(or > 0) { 
+      if(!is.null(nationalites[[nationalite]])) {
+        nationalites[[nationalite]] <- nationalites[[nationalite]] + 1
+      } else {
+        nationalites[[nationalite]] <- 1
+      }
+    }
+  }
+  
+  return(unlist(nationalites))
+}
+
+resultats_nationalites <- lapply(data_medailles_sport_ete$Athletes_medailles, extraire_nationalite_athlete)
+
+nationalites_agg <- Reduce(`+`, resultats_nationalites)
+
+# Les 3 nationalités les plus représentées
+top_3_nationalites <- sort(nationalites_agg, decreasing = TRUE)[1:3]
+
+top_3_nationalites
+```
+
+Cuba, Hungary and the Soviet Union are the 3 most represented nationalities.

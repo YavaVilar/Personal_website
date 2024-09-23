@@ -3,22 +3,26 @@ project:
   output-dir: .
 
 website:
-  title: "Yava Vilar Valera"
+  title: "About the blog"
   twitter-card: true
   open-graph: true
   navbar:
-      right:
-      - icon: github
-        href: https://github.com/YavaVilar
-      - icon: linkedin
-        href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
-      left:
-      - href: academic works.qmd
+        title: "Yava Vilar Valera"
+        background: "darkslategray"
+        foreground: "#FFFFFF"
+        pinned: true
+        right:
+         - href: About the blog.qmd
+         - icon: linkedin
+         - href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
+        left:
+         - href: academic works.qmd
+         - href: R.qmd
 
-page-footer:
+  page-footer:
     left:
       - href: https://www.quarto.org
-        text: Built with Quarto
+        text: Built with Quarto | R Studio
 
 format:
   html:
@@ -27,5 +31,5 @@ format:
 
 execute:
   freeze: auto
-editor: visual
+
 

@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Yava Vilar Valera">
+<meta name="author" content="Vilar Valera Yava">
 <meta name="dcterms.date" content="2024-04-30">
 
-<title>Yava Vilar Valera - Time Series : Evolution of the Spanish Population, 1277-1838</title>
+<title>About the blog - Time Series : Evolution of the Spanish Population, 1277-1838</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,7 +26,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -63,11 +62,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Yava Vilar Valera - Time Series : Evolution of the Spanish Population, 1277-1838">
+<meta property="og:title" content="About the blog - Time Series : Evolution of the Spanish Population, 1277-1838">
 <meta property="og:description" content="">
 <meta property="og:image" content="pop in Spain.jpg">
-<meta property="og:site-name" content="Yava Vilar Valera">
-<meta name="twitter:title" content="Yava Vilar Valera - Time Series : Evolution of the Spanish Population, 1277-1838">
+<meta property="og:site-name" content="About the blog">
+<meta name="twitter:title" content="About the blog - Time Series : Evolution of the Spanish Population, 1277-1838">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="pop in Spain.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -94,16 +93,18 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../academic works.html" rel="" target="">
  <span class="menu-text">Academic works</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../R.html" rel="" target="">
+ <span class="menu-text">R &amp; Python</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/YavaVilar" rel="" target=""><i class="bi bi-github" role="img">
-</i> 
- <span class="menu-text"></span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../About the blog.html" rel="" target="">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/yava-vilar-valera-496999271/" rel="" target=""><i class="bi bi-linkedin" role="img">
-</i> 
+    <a class="nav-link" href="https://www.linkedin.com/in/yava-vilar-valera-496999271/" rel="" target="">
  <span class="menu-text"></span></a>
   </li>  
 </ul>
@@ -127,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Yava Vilar Valera </p>
+               <p>Vilar Valera Yava </p>
             </div>
     </div>
       
@@ -171,15 +172,19 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">1. Data</h3>
-<p>Data source comes from databases provided by “La Fundación Real del Pino”, a private non-profit organization located in Madrid, Spain. Founded in 2006, its main goal is to promote research in diverse social sciences fields, particularly in economics and economic historical evolution. The series is composed of 561 years, plus 12 years that will be reserved to compare model-predictions with actual values. It is important to note that data before 1750 has been constructed from mathematical equations and models, which may not capture the complexity of the phenomenon they seek to represent. Therefore, careful attention is required when interpreting the results of this analysis.</p>
+<p>Data source comes from databases provided by “La Fundación Real del Pino”, a private non-profit organization located in Madrid, Spain. Founded in 2006, its main goal is to promote research in diverse social sciences fields, particularly in economics and economic history. The series is composed of 561 years, plus 12 years that will be reserved to compare model-predictions with actual values. It is important to note that data before 1750 has been constructed from mathematical equations and models, which may not capture the complexity of the phenomenon they seek to represent. Therefore, careful attention is required when interpreting the results of this analysis. The original series is available in Figure 1.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1: Total Population in Spain, 1277-1838</p>
+<p><img src="images/clipboard-3560648993.png" class="img-fluid" width="629"></p>
 <p>An adjusted series to correct for one Level-Shift (LS) outlier has been constructed. Outliers are atypical, extreme values that can affect the quality of model fit and the reliability of predictions. In this case, the outlier detected in the year 1508 reflects a change of the population’s trajectory from a significant slowdown driven by the expulsion of the Jews from the country to a rapid and natural recovery.</p>
-<p>Similarly, a differentiation has been applied to the original series in order to meet the stationarity hypotheses (constant mean and variance over time), essential to be able to model the data.</p>
+<p>Similarly, a differentiation has been applied to the original series in order to meet the stationarity hypotheses (constant mean and variance over time), essential to be able to model the data. The final series corrected from outliers and differenciated is available in Figure 2.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2: Adjusted series, 1277-1838</p>
+<p><img src="images/clipboard-4194005688.png" class="img-fluid" width="623"></p>
 </section>
 <section id="linear-predictions" class="level3">
 <h3 class="anchored" data-anchor-id="linear-predictions">2. Linear predictions</h3>
 <section id="models-parameters" class="level4">
 <h4 class="anchored" data-anchor-id="models-parameters">2.1. Model’s parameters</h4>
-<p>In order to analyze temporal series and make future predictions, it is essential to previously estimate models that capture the dependence parameters of past values and other predictor variables. The main assumption of linear models is that the relationship between variables is linear. The models’ parameters that have been monopolized are summarized in table 1 and explained next:</p>
+<p>In order to analyze temporal series and make future predictions, it is essential to previously estimate models that capture the dependence parameters of past values and other predictor variables. The main assumption of linear models is that the relationship between variables is linear. The models’ parameters that have been monopolized are summarized in Table 1 and explained next:</p>
 <table class="table">
 <caption>Table 1: Model’s parameters</caption>
 <colgroup>
@@ -297,8 +302,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <ul>
 <li><p>AR(1): describes how the current value of a variable is influenced by its immediately preceding value and a stochastic error term. The parameter of this model is 0.4820. A value lower than 1 indicates a stationary series that tends to revert its mean, that is, that tends to converge towards a mean value in the long term. The positiveness of the coefficient reveals an increase of each current value as long as time goes up. Indeed, a positive term AR(1) implies that when the value of the time series t-1 is greater than its mean, the value at time t is also greater than its mean, suggesting a pattern of growth over time.</p></li>
-<li><p>ARIMA: It combines three components: autoregression (AR), differencing (I for Integrated), and moving averages (MA). The AR part of the model uses the relationship between an observation and a number of lagged observations (previous time points). <em>p</em> is the number of lagged observations included in the model. The I component involves differencing the data to make it stationary. The parameter <em>d</em> indicates the number of times the series is differenciated. The MA part of the model uses the relationship between an observation and a residual error from a moving average model applied to lagged observations. The parameter <em>q</em> is the number of lagged forecast errors in the prediction equation. Our model is characterised by having two parameters Moving Average processus significant at the 1% level. This shows a dependency relationship between the value at a specific point of time t and error term both at the immediate previous period, t-1, and at the second previous period t-2. Negative coefficients indicates this relationship is negative and the greater coefficient of MA(1) compared to MA(2) suggests that the error term at t-1 has a higher effect on the current value.</p></li>
-<li><p>Holt-Winters: Appeared in the 1960s, Holt-Winters method is a prognostic technique that can capture both tendance and seasonality in data, with the advantage of being able to adapt to no-seasonal series. Updates to the level, trend, and seasonality components are based on three smoothing parameters: α, β, and γ, where α (alpha) controls the smoothing of the level component, β (beta) controls the trend component, and γ (gamma) the seasonality component. As the series analysed on this work does not have a seasonal component, Holt-Winters model has been estimated in R specifying an inexistent gamma parameter. In the instances when α and β parameters are close to 1, we talk about a “smooth” forecast, while if they are close to 0, they reflect a “strong smoothing”. In the first case, recent past has a big weight on forecasting. In the second case, a higher importance is given to distant past. In this case, we could say near past has a bigger weight than remote past, because α is completely equal to 1 and β coefficient is relatively important.</p></li>
+<li><p>ARIMA: It combines three components: autoregression (AR), differencing (I for Integrated), and moving averages (MA). The AR part of the model uses the relationship between an observation and a number of lagged observations (previous time points). <em>p</em> is the number of lagged observations included in the model. The I component involves differencing the data to make it stationary. The parameter <em>d</em> indicates the number of times the series is differenciated. The MA part of the model uses the relationship between an observation and a residual error from a moving average model applied to lagged observations. The parameter <em>q</em> is the number of lagged forecast errors in the prediction equation. Our model is characterized by having two parameters Moving Average processus significant at the 1% level. This shows a dependency relationship between the value at a specific point of time t and error term both at the immediate previous period, t-1, and at the second previous period t-2. Negative coefficients indicates this relationship is negative and the greater coefficient of MA(1) compared to MA(2) suggests that the error term at t-1 has a higher effect on the current value.</p></li>
+<li><p>Holt-Winters: Appeared in the 1960s, Holt-Winters method is a prognostic technique that can capture both tendence and seasonality in data, with the advantage of being able to adapt to no-seasonal series. Updates to the level, trend, and seasonality components are based on three smoothing parameters: α, β, and γ, where α (alpha) controls the smoothing of the level component, β (beta) controls the trend component, and γ (gamma) the seasonality component. As the series analyzed on this work does not have a seasonal component, Holt-Winters model has been estimated in R specifying an unexistent gamma parameter. In the instances when α and β parameters are close to 1, we talk about a “smooth” forecast, while if they are close to 0, they reflect a “strong smoothing”. In the first case, recent past has a big weight on forecasting. In the second case, a higher importance is given to distant past. In this case, we could say near past has a bigger weight than remote past, because α is completely equal to 1 and β coefficient is relatively important.</p></li>
 <li><p>ADAM-ETS: The ADAM-ETS method is an approach that combines exponential smoothing (ETS) approaches with state space models to model time series with error, trend, and seasonality components, also allowing the inclusion of other covariates. The smoothing coefficient alpha controls the relative importance of past observations in estimating the current level in the ETS model. In this case, the estimated value of alpha is 1.0, specifying that full weight is given to the most recent observation in the calculation of the current level. Beta captures the relevance of diƯerences between past observations in estimating the current trend in the ETS model, which has a value of 0.9999. This indicates that diƯerences between past observations have a very important weight in approximating the current trend. Phi represents the smoothing coefficient associated with the trend. A value equal to 1 suggests a complete weight to recent observations when estimating the trend, which means that the trend will adjust more quickly to recent changes in the data.</p></li>
 <li><p>SSARIMA: They are a prediction technique that combines the State Space with ARIMA methodology for the analysis and forecasting of temporal data, whose acronym meaning is: “State Space ARIMA”. In this way, these models can include ARIMA components to model the time structure of the series, as well as additional state space components to shape other unobservable factors that can influence the time series. Auto.sarima function in R preconised an ARIMA(0,0,3) model with a constant. We can see in Table 1 that the weight of each previous period MA decreases with the higher number of parameters. That is, the influence of the most distant periods is smaller compared to the closest ones. Indeed, coefficient of MA(1) is 0,5 while that of MA(3) equals 0,075.</p></li>
 <li><p>CES: Proposed by Svetunkov, Kourentzes and Ord in 2022, CES models refer to “Complex Exponential Smoothing” models. They are an extension of traditional exponential lysing methods that are based on the theory of complex variables and oƯer an innovative way to model and forecast time series. They can predict both stationary and non-stationary series, and can be adapted to seasonal data through their formulation in a state space form. Auto.ces function of R software estimated a CES(n) model, where n represents the non-seasonality term.</p></li>
@@ -308,8 +313,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="models-predictions" class="level4">
 <h4 class="anchored" data-anchor-id="models-predictions">2.2. Model’s predictions</h4>
-<p>Once the model’s parameters are defined, we can proceed to make predictions. For this, nine years of the original series had been kept with the aim to compare them with the forecast generated by the models. Graph 1 shows the forecast evolution of these nine years for each of the model along with actual data, going from 1839 to 1848. A naive prediction has also been included, which is a simple forecasting approach based on the assumption that the future value of a time series will be equal to the last observed value in the series. In other words, this method assumes there is no change in the time series and that the future value will be equal to the last observed one. Thus, this approach is useful as a reference to determine whether more complex models provide any significant prediction improvement.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Graph 1: Model’s predictions</p>
+<p>Once the model’s parameters are defined, we can proceed to make predictions. For this, nine years of the original series had been kept with the aim to compare them with the forecast generated by the models. Figure 3 shows the forecast evolution of these nine years for each of the model along with actual data, going from 1839 to 1848. A naive prediction has also been included, which is a simple forecasting approach based on the assumption that the future value of a time series will be equal to the last observed value in the series. In other words, this method assumes there is no change in the time series and that the future value will be equal to the last observed one. Thus, this approach is useful as a reference to determine whether more complex models provide any significant prediction improvement.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3: Model’s predictions</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-2227500091.png" class="img-fluid figure-img" width="622"></p>
@@ -326,7 +331,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Diebold-Mariano (DM) test: a statistical test used to compare the predictive accuracy of two time series models. This test was proposed by Francis X. Diebold and Robert S. Mariano in 1995, whose purpose is to determine whether there is a significant difference in the predictive performance between two models. The null hypothesis is that both models have the same predictive accuracy, while the alternative hypothesis is that at least one of the models offers a more accurate forecast. It will be used to compare each of the models with the naive forecast, which helps determine if the model in question is more interesting than making a simple prediction.</p></li>
 <li><p>𝑅 <em>OOS:</em> a measure of the predictive ability of a model when applied to new data that were not used to train the model. In essence, it measures how much variability in the dependent variable the model can explain in data not used in the fitting process. A higher out-of-sample R-squared value indicates a better predictive ability of the model on new data. It is also a valuable tool for comparing and evaluating the predictive performance of different models relative to a reference or benchmark model. If the value of this metric is greater than 0, it will be interpreted that the model in question has a superior predictive ability to the benchmark model. If it is less than zero, it will be the opposite, while if it is equal to 0, there will be no predictive difference. The naive forecast will be used as benchmark.</p></li>
 <li><p>Cumulative Squared Prediction Error (CSPE): often used to evaluate the accuracy of predictions in time series models. It is calculated by adding the squared errors of the predictions over a given period. Squared errors are used to give more weight to large errors, reflecting the importance of avoiding large deviations in predictions.</p>
-<p>Table 2 summarizes the values of the three first mentioned metrics, while graph 2 shows the CSPE.</p>
+<p>Table 2 summarizes the values of the three first mentioned metrics, while Figure 4 shows the CSPE.</p>
 <table class="table">
 <caption>Table 2: Model’s performance indicators</caption>
 <thead>
@@ -390,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Graph 2: Model’s CSPE</p></li>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4: Model’s CSPE</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -401,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>In conclusion, this work analysed the trend of the historic evolution of the Spanish population. We have chosen and selected different prediction models to evaluate which one is more accuratelyadjusted to the structure of the series and which can be more reliable for use in a real-life situation. The result is that the ARIMA structure with three Moving Average processes has a minor prediction error. This model has predicted a tendency of increase for the near historical years, adjusting to the real life, with a satisfactory error term. Nevertheless, the analysis and exploration of other techniques might continue to get models with even lower prediction errors, and cross-validation with other independent data sources is recommended to confirm the robustness of the conclusions drawn from this constructed series.</p>
+<p>In conclusion, this work analyzed the trend of the historic evolution of the Spanish population. We have chosen and selected different prediction models to evaluate which one is more accurately adjusted to the structure of the series and which can be more reliable for use in a real-life situation. The result is that the ARIMA structure with three Moving Average processes has a minor prediction error. This model has predicted a tendency of increase for the near historical years, adjusting to the real life, with a satisfactory error term. Nevertheless, the analysis and exploration of other techniques might continue to get models with even lower prediction errors, and cross-validation with other independent data sources is recommended to confirm the robustness of the conclusions drawn from this constructed series.</p>
 
 
 </section>
@@ -641,6 +646,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.quarto.org">Built with Quarto | R Studio</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

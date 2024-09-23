@@ -24,5 +24,14 @@
       "/posts/spanish economy/Spanish economy.html",
       "/posts/essay EH2/index.html"
     ]
+  },
+  {
+    "listing": "/R.html",
+    "items": [
+      "/R/Python/Python Dash.html",
+      "/R/TD1/TD1.html",
+      "/R/TD2/TD 2.html",
+      "/R/TD3/TD3.html"
+    ]
   }
 ]

@@ -1,0 +1,193 @@
+---
+title: "Analyzing Olympic Games Paris 2024: Basic code in R"
+author: "Yava Vilar Valera"
+date: "03/03/2024"
+---
+
+This series of exercises in R focuses on analyzing data relating to the Olympic infrastructure for the 2024 Games in Paris. We'll be using R's basic functions exclusively to explore, analyze and extract key information about Olympic and Paralympic venues.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, warning=FALSE, errors=FALSE, message=FALSE, results=TRUE, fig.width=8, fig.height=6)
+
+```
+
+-   **Read file with database, name and type of columns, number of rows**
+
+```{r}
+
+#Lire et nommer le fichier 
+data_ex <- read.csv("C:/Users/yavav/Downloads/paris-2024-sites-olympiques-et-paralympiques-franciliens (1).csv", sep=";", dec=",", quote="\"", na.strings = NA)
+
+#Noms et nature des colonnes 
+str(data_ex)
+
+#Nombre de lignes 
+nrow(data_ex) 
+```
+
+The dataframe contains 4 columns: geo_point, olympic village, olympic_venues and sports, coded in chr (character), and31 columns.
+
+-   **How many Olympic venues are there?**
+
+```{r}
+x <- 0
+
+for (value in data_ex$sites_olympiques_paralympiques) {
+  if (value == "Site olympique" | value == "Site olympique,Site paralympique") {
+    x <- x + 1
+  } } 
+
+print(paste("Número total de Sites olympiques:", x))
+
+```
+
+-   **How many Paralympic venues are there?**
+
+```{r}
+
+y <- 0
+
+for (value in data_ex$sites_olympiques_paralympiques) {
+  if (value == "Site paralympique" | value == "Site olympique,Site paralympique") {
+    y <- y + 1
+  } } 
+
+print(paste("Número total de Sites paralympiques:", y))
+
+```
+
+-   **Which sites host several sporting disciplines?**
+
+```{r}
+
+#On cherche  les cellules de la colonne sports qui continnent des éléments séparés par un virgule, indice d'acceuil de plus d'un sport
+
+sites_plusieurs_sports <- data_ex[grepl(",", data_ex$sports), c("nom")]
+sites_plusieurs_sports
+```
+
+-   **What para-Olympic disciplines are hosted at these venues in the Paris region?**
+
+```{r}
+disciplines_plusieurs_sports <- data_ex[grepl(",", data_ex$sports), c("nom", "sports")] 
+disciplines_plusieurs_sports
+```
+
+The resulting dataframe displays the name of the site with its associated disciplines.
+
+-   **Sites with the most followers**
+
+```{r}
+max_sports <- max(sapply(strsplit(data_ex$sports, ","),length))
+
+files_max_sports <- which(sapply(strsplit(data_ex$sports, ","),length)==max_sports)
+
+data_max_sports <- data_ex[files_max_sports, c("nom", "sports")]
+
+data_max_sports
+```
+
+We can see that there are a total of 8 venues hosting a total of 4 sports each.
+
+-   **Which discipline will take place at the greatest number of venues? What are these venues?**
+
+```{r}
+# Conter la fréquence de chaque discipline
+frequence_disciplines <- table(unlist(strsplit(data_ex$sports, ",")))
+
+# Discipline avec plus grande fréquence
+discipline_plus_frequente <- names(frequence_disciplines)[which.max(frequence_disciplines)]
+
+# Résultat
+cat("La discipline qui aura lieu sur le plus grand nombre de sites est:", discipline_plus_frequente, "\n")
+
+
+```
+
+```{r}
+# Filtrer les sites qui incluent le mot "Athlétisme" dans la colonne Discipline
+sites_atletisme <- data_ex[grepl("Athlétisme", data_ex$sports, ignore.case = TRUE), c("nom", "sports")]
+
+# Imprimer les résultats
+cat("Les sites où l'athlétisme aura lieu sont les suivants:\n")
+print(sites_atletisme)
+```
+
+Athletics will be held at 5 venues in Paris.
+
+-   **Which are the two nearest venues?**
+
+```{r}
+#Libraires 
+
+library(geosphere)
+library(tidyr)
+
+#Séparer les coordonnées géographiques en deux colonnes par la virgule 
+
+data_ex <- separate(data_ex, geo_point, into = c("lat", "long"), sep = ", ")
+
+# Fonction pour calculer la distance euclidienne
+
+data_ex$lat <- as.numeric(data_ex$lat)
+data_ex$long <- as.numeric(data_ex$long)
+
+distances <- distHaversine(data_ex[, c("long", "lat")])
+print(distances)
+
+# Matrice pour garder les distances
+distances <- matrix(NA, nrow = nrow(data_ex), ncol = nrow(data_ex))
+
+# Calculer les distances entre toutes les coordonnées avec un boucle 
+for (i in 1:(nrow(data_ex) - 1)) {
+  for (j in (i + 1):nrow(data_ex)) {
+    distances[i, j] <- distHaversine(
+      c(data_ex$lat[i], data_ex$long[i]),
+      c(data_ex$lat[j], data_ex$long[j])
+    )
+    distances[j, i] <- distances[i, j]  # Symétrie
+  }
+}
+
+# Convertir la matirce en dataframe
+distances_df <- as.data.frame(distances)
+
+#Le sites les plus proches
+min_distance <- min(distances_df, na.rm=TRUE)
+min_distance 
+
+#Min distances
+min_distannce <- which(distances_df==min_distance, arr.ind=TRUE)
+min_distannce
+
+
+
+```
+
+The minimum distance is 91.69 km, identified by min_distance. Min_distannce identifies the row and column of the 91.69 value within the matrix. This corresponds to the names of the sites in columns 19 and 29 of the dataframe data_ex. Stade BMX de Saint-Quentin-en-Yvelines and Vélodrome National de Saint-Quentin-en-Yvelines are the nearest sites.
+
+-   **Which are the most distant sites**
+
+```{r}
+max_distance <- max(distances_df, na.rm=TRUE)
+print(max_distance)
+
+max_distannce <- which(distances_df==max_distance, arr.ind=TRUE)
+max_distannce
+```
+
+Colline d'Elancourt (7) and Stade Nautique (27) are the furthest away, with a distance of 74882.55 km.
+
+-   **Apartment at the center of gravity of all Olympic sites**
+
+```{r}
+# Calculer les coordonnées moyennes (barycentriques)
+barycentre <- c(mean(data_ex$lat), mean(data_ex$long))
+
+# Trouver le site le plus proche du barycentre
+site_proche_barycentre <- data_ex[which.min(geosphere::distVincentySphere(barycentre, cbind(data_ex$lat, data_ex$long))), ]
+
+site_proche_barycentre
+```
+
+The Eiffel Tower Stadium is at the center of all the Olympic venues.

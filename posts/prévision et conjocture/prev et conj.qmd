@@ -1,7 +1,7 @@
 ---
 title: "Time Series : Evolution of the Spanish Population, 1277-1838"
 image: "pop in Spain.jpg"
-author: Yava Vilar Valera
+author: Vilar Valera Yava
 date: 04/30/2024
 ---
 
@@ -13,17 +13,25 @@ Since the beginning of humanity, world's population has been continously develop
 
 ### 1. Data
 
-Data source comes from databases provided by “La Fundación Real del Pino”, a private non-profit organization located in Madrid, Spain. Founded in 2006, its main goal is to promote research in diverse social sciences fields, particularly in economics and economic historical evolution. The series is composed of 561 years, plus 12 years that will be reserved to compare model-predictions with actual values. It is important to note that data before 1750 has been constructed from mathematical equations and models, which may not capture the complexity of the phenomenon they seek to represent. Therefore, careful attention is required when interpreting the results of this analysis.
+Data source comes from databases provided by “La Fundación Real del Pino”, a private non-profit organization located in Madrid, Spain. Founded in 2006, its main goal is to promote research in diverse social sciences fields, particularly in economics and economic history. The series is composed of 561 years, plus 12 years that will be reserved to compare model-predictions with actual values. It is important to note that data before 1750 has been constructed from mathematical equations and models, which may not capture the complexity of the phenomenon they seek to represent. Therefore, careful attention is required when interpreting the results of this analysis. The original series is available in Figure 1.
+
+                                       Figure 1: Total Population in Spain, 1277-1838
+
+![](images/clipboard-3560648993.png){width="629"}
 
 An adjusted series to correct for one Level-Shift (LS) outlier has been constructed. Outliers are atypical, extreme values that can affect the quality of model fit and the reliability of predictions. In this case, the outlier detected in the year 1508 reflects a change of the population's trajectory from a significant slowdown driven by the expulsion of the Jews from the country to a rapid and natural recovery.
 
-Similarly, a differentiation has been applied to the original series in order to meet the stationarity hypotheses (constant mean and variance over time), essential to be able to model the data.
+Similarly, a differentiation has been applied to the original series in order to meet the stationarity hypotheses (constant mean and variance over time), essential to be able to model the data. The final series corrected from outliers and differenciated is available in Figure 2.
+
+                                       Figure 2: Adjusted series, 1277-1838
+
+![](images/clipboard-4194005688.png){width="623"}
 
 ### 2. Linear predictions
 
 #### 2.1. Model's parameters
 
-In order to analyze temporal series and make future predictions, it is essential to previously estimate models that capture the dependence parameters of past values and other predictor variables. The main assumption of linear models is that the relationship between variables is linear. The models' parameters that have been monopolized are summarized in table 1 and explained next:
+In order to analyze temporal series and make future predictions, it is essential to previously estimate models that capture the dependence parameters of past values and other predictor variables. The main assumption of linear models is that the relationship between variables is linear. The models' parameters that have been monopolized are summarized in Table 1 and explained next:
 
 |              | AR(1)      | ARIMA(0,2,2) | Holt-Winters | ADAM-ETS           | SSARIMA  | CES      |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
@@ -42,9 +50,9 @@ In order to analyze temporal series and make future predictions, it is essential
 
 -   AR(1): describes how the current value of a variable is influenced by its immediately preceding value and a stochastic error term. The parameter of this model is 0.4820. A value lower than 1 indicates a stationary series that tends to revert its mean, that is, that tends to converge towards a mean value in the long term. The positiveness of the coefficient reveals an increase of each current value as long as time goes up. Indeed, a positive term AR(1) implies that when the value of the time series t-1 is greater than its mean, the value at time t is also greater than its mean, suggesting a pattern of growth over time.
 
--   ARIMA: It combines three components: autoregression (AR), differencing (I for Integrated), and moving averages (MA). The AR part of the model uses the relationship between an observation and a number of lagged observations (previous time points). *p* is the number of lagged observations included in the model. The I component involves differencing the data to make it stationary. The parameter *d* indicates the number of times the series is differenciated. The MA part of the model uses the relationship between an observation and a residual error from a moving average model applied to lagged observations. The parameter *q* is the number of lagged forecast errors in the prediction equation. Our model is characterised by having two parameters Moving Average processus significant at the 1% level. This shows a dependency relationship between the value at a specific point of time t and error term both at the immediate previous period, t-1, and at the second previous period t-2. Negative coefficients indicates this relationship is negative and the greater coefficient of MA(1) compared to MA(2) suggests that the error term at t-1 has a higher effect on the current value.
+-   ARIMA: It combines three components: autoregression (AR), differencing (I for Integrated), and moving averages (MA). The AR part of the model uses the relationship between an observation and a number of lagged observations (previous time points). *p* is the number of lagged observations included in the model. The I component involves differencing the data to make it stationary. The parameter *d* indicates the number of times the series is differenciated. The MA part of the model uses the relationship between an observation and a residual error from a moving average model applied to lagged observations. The parameter *q* is the number of lagged forecast errors in the prediction equation. Our model is characterized by having two parameters Moving Average processus significant at the 1% level. This shows a dependency relationship between the value at a specific point of time t and error term both at the immediate previous period, t-1, and at the second previous period t-2. Negative coefficients indicates this relationship is negative and the greater coefficient of MA(1) compared to MA(2) suggests that the error term at t-1 has a higher effect on the current value.
 
--   Holt-Winters: Appeared in the 1960s, Holt-Winters method is a prognostic technique that can capture both tendance and seasonality in data, with the advantage of being able to adapt to no-seasonal series. Updates to the level, trend, and seasonality components are based on three smoothing parameters: α, β, and γ, where α (alpha) controls the smoothing of the level component, β (beta) controls the trend component, and γ (gamma) the seasonality component. As the series analysed on this work does not have a seasonal component, Holt-Winters model has been estimated in R specifying an inexistent gamma parameter. In the instances when α and β parameters are close to 1, we talk about a “smooth” forecast, while if they are close to 0, they reflect a “strong smoothing”. In the first case, recent past has a big weight on forecasting. In the second case, a higher importance is given to distant past. In this case, we could say near past has a bigger weight than remote past, because α is completely equal to 1 and β coefficient is relatively important.
+-   Holt-Winters: Appeared in the 1960s, Holt-Winters method is a prognostic technique that can capture both tendence and seasonality in data, with the advantage of being able to adapt to no-seasonal series. Updates to the level, trend, and seasonality components are based on three smoothing parameters: α, β, and γ, where α (alpha) controls the smoothing of the level component, β (beta) controls the trend component, and γ (gamma) the seasonality component. As the series analyzed on this work does not have a seasonal component, Holt-Winters model has been estimated in R specifying an unexistent gamma parameter. In the instances when α and β parameters are close to 1, we talk about a “smooth” forecast, while if they are close to 0, they reflect a “strong smoothing”. In the first case, recent past has a big weight on forecasting. In the second case, a higher importance is given to distant past. In this case, we could say near past has a bigger weight than remote past, because α is completely equal to 1 and β coefficient is relatively important.
 
 -   ADAM-ETS: The ADAM-ETS method is an approach that combines exponential smoothing (ETS) approaches with state space models to model time series with error, trend, and seasonality components, also allowing the inclusion of other covariates. The smoothing coefficient alpha controls the relative importance of past observations in estimating the current level in the ETS model. In this case, the estimated value of alpha is 1.0, specifying that full weight is given to the most recent observation in the calculation of the current level. Beta captures the relevance of diƯerences between past observations in estimating the current trend in the ETS model, which has a value of 0.9999. This indicates that diƯerences between past observations have a very important weight in approximating the current trend. Phi represents the smoothing coefficient associated with the trend. A value equal to 1 suggests a complete weight to recent observations when estimating the trend, which means that the trend will adjust more quickly to recent changes in the data.
 
@@ -58,9 +66,9 @@ ADAM-ETS offers the lowest AIC and AICc. This is the reason why this model is pr
 
 #### 2.2. Model's predictions
 
-Once the model's parameters are defined, we can proceed to make predictions. For this, nine years of the original series had been kept with the aim to compare them with the forecast generated by the models. Graph 1 shows the forecast evolution of these nine years for each of the model along with actual data, going from 1839 to 1848. A naive prediction has also been included, which is a simple forecasting approach based on the assumption that the future value of a time series will be equal to the last observed value in the series. In other words, this method assumes there is no change in the time series and that the future value will be equal to the last observed one. Thus, this approach is useful as a reference to determine whether more complex models provide any significant prediction improvement.
+Once the model's parameters are defined, we can proceed to make predictions. For this, nine years of the original series had been kept with the aim to compare them with the forecast generated by the models. Figure 3 shows the forecast evolution of these nine years for each of the model along with actual data, going from 1839 to 1848. A naive prediction has also been included, which is a simple forecasting approach based on the assumption that the future value of a time series will be equal to the last observed value in the series. In other words, this method assumes there is no change in the time series and that the future value will be equal to the last observed one. Thus, this approach is useful as a reference to determine whether more complex models provide any significant prediction improvement.
 
-                                       Graph 1: Model's predictions
+                                       Figure 3: Model's predictions
 
 ![](images/clipboard-2227500091.png){fig-align="center" width="622"}
 
@@ -78,7 +86,7 @@ To evaluate the model's performance, we are going to use four evaluation metrics
 
 -   Cumulative Squared Prediction Error (CSPE): often used to evaluate the accuracy of predictions in time series models. It is calculated by adding the squared errors of the predictions over a given period. Squared errors are used to give more weight to large errors, reflecting the importance of avoiding large deviations in predictions.
 
-    Table 2 summarizes the values of the three first mentioned metrics, while graph 2 shows the CSPE.
+    Table 2 summarizes the values of the three first mentioned metrics, while Figure 4 shows the CSPE.
 
     | Model        | MSE    | *R OOS* | DM statistic | DM p. value |
     |--------------|--------|---------|--------------|-------------|
@@ -92,7 +100,7 @@ To evaluate the model's performance, we are going to use four evaluation metrics
 
     : Table 2: Model's performance indicators
 
-                                           Graph 2: Model's CSPE
+                                           Figure 4: Model's CSPE
 
 ![](images/clipboard-3723125529.png){fig-align="center" width="583"}
 
@@ -100,4 +108,4 @@ We can judge that all the models seem to provide better prediction results compa
 
 ### Conclusion
 
-In conclusion, this work analysed the trend of the historic evolution of the Spanish population. We have chosen and selected different prediction models to evaluate which one is more accuratelyadjusted to the structure of the series and which can be more reliable for use in a real-life situation. The result is that the ARIMA structure with three Moving Average processes has a minor prediction error. This model has predicted a tendency of increase for the near historical years, adjusting to the real life, with a satisfactory error term. Nevertheless, the analysis and exploration of other techniques might continue to get models with even lower prediction errors, and cross-validation with other independent data sources is recommended to confirm the robustness of the conclusions drawn from this constructed series.
+In conclusion, this work analyzed the trend of the historic evolution of the Spanish population. We have chosen and selected different prediction models to evaluate which one is more accurately adjusted to the structure of the series and which can be more reliable for use in a real-life situation. The result is that the ARIMA structure with three Moving Average processes has a minor prediction error. This model has predicted a tendency of increase for the near historical years, adjusting to the real life, with a satisfactory error term. Nevertheless, the analysis and exploration of other techniques might continue to get models with even lower prediction errors, and cross-validation with other independent data sources is recommended to confirm the robustness of the conclusions drawn from this constructed series.

@@ -1,0 +1,11 @@
+---
+title: "About"
+subtitle: "Economics & Econometrics | Data Science"
+image: office-beach.jpg
+feed: true
+sidebar: false
+about:
+  template: jolla
+---
+
+This blog offers a glimpse into my academic journey. Feel free to explore my projects, complete with their virtues and imperfections, which reflect a process of deep engagement with my own learning.
