@@ -1,7 +1,6 @@
 ---
-title: "Essay: Technological change and employment"
+title: "Technological Change and Employment"
 image: "technological change.jpg"
-author: Vilar Valera Yava
 date: 05/23/2022
 toc: true
 ---

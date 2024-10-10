@@ -1,5 +1,5 @@
 ---
-title: "Analyzing Olympic Games Paris 2024: Fonctions in R"
+title: "Analyzing Olympic Games : Fonctions in R"
 date: "03/02/2024"
 author: Yava Vilar Valera
 toc: true

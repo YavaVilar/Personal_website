@@ -1,7 +1,7 @@
 ---
-title: "Analyzing Olympic Games Paris 2024: Basic code in R"
-author: "Yava Vilar Valera"
+title: "Analyzing Olympic Games : Basic code in R"
 date: "03/03/2024"
+author: Yava Vilar Valera
 ---
 
 This series of exercises in R focuses on analyzing data relating to the Olympic infrastructure for the 2024 Games in Paris. We'll be using R's basic functions exclusively to explore, analyze and extract key information about Olympic and Paralympic venues.

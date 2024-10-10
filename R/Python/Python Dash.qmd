@@ -273,4 +273,4 @@ if __name__ == '__main__':
 
 **Output:**
 
-![](images/Capture d'écran 2024-09-02 171839.png)
+![](images/Capture%20d'écran%202024-09-02%20171839.png)

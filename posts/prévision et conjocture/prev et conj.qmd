@@ -1,7 +1,6 @@
 ---
-title: "Time Series : Evolution of the Spanish Population, 1277-1838"
+title: "Forecasting: Evolution of the Spanish Population"
 image: "pop in Spain.jpg"
-author: Vilar Valera Yava
 date: 04/30/2024
 ---
 

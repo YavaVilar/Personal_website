@@ -1,7 +1,6 @@
 ---
-title: "Time Series : Analysis of the Mortality Rate of Children Under Five in Nepal, 1960-2020"
+title: "Time Series: Analysis of the Mortality Rate of Children Under Five in Nepal"
 image: "image série temp.png"
-author: Vilar Valera Yava
 date: 04/19/2024
 ---
 
