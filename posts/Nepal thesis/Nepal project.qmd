@@ -1,5 +1,5 @@
 ---
-title: "Assessing the Impact of the Nepal 2015 Gorkha Earthquake on Children's Health"
+title: "Master's Thesis: Assessing the Impact of the Nepal 2015 Gorkha Earthquake on Children's Health"
 image: "children Nepal.jpg"
 toc: true
 date: 06/03/2024
@@ -7,7 +7,7 @@ date: 06/03/2024
 
 ### About the project
 
-For the dissertation of my first year in the Master's program, I inquired about the consequences that the 2015 Gorkha earthquake in Nepal had on children health, and more specifically, on cough prevalence. Nepal is an underdeveloped country where many children still do not have access to decent and dignified living conditions, while earthquakes can aggravate these issues. I was highly motivated to conduct research on this topic and to apply the econometric tools I had recently acquired in the Master.
+In my Master's thesis, I inquired about the consequences that the 2015 Gorkha earthquake in Nepal had on children health, and more specifically, on cough prevalence. Nepal is an underdeveloped country where many children still do not have access to decent and dignified living conditions, while earthquakes can aggravate these issues. I was highly motivated to conduct research on this topic and to apply the econometric tools I had recently acquired in the Master.
 
 Data cleaning, management, and analysis were major parts of the project. I worked with DHS (Demographic and Health Surveys) data files, using RStudio and Stata as the main statistical software. The literature review and writing of the paper completed the task. Below you can find a summary of the study framework, the data and methodology employed, and the main findings of the study, which have been summarized from the sixty pages I originally wrote.
 

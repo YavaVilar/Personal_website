@@ -1,0 +1,13 @@
+---
+title: "Penalized Regressions: Analysis of Employment Growth Rate in Canada, 1981-2024"
+image: "canadajob.jpg"
+date: 11/06/2024
+---
+
+There are many realistic situations in which working with large databases becomes necessary and unavoidable. Being able to manage them is thus crucial. Beyond limited traditional econometric tools, such as OLS regressions, dimension reduction approaches, and penalized regressions aimed at conducting variable selection, are able to address this issue and provide confident and interpretable results. This study explores all these methods using a high-dimensional database containing economic indicators for Canada. The outcome of interest is the employment rate, with more than 200 variables representing its potential determinants. Results have shown similar predictors deemed relevant across penalized regressions, with unemployment rate values and lagged employment levels as the primary determinants.
+
+Below you will find my project and you can also click [here](Dossier%20Régressions%20Pénalisées,%20Yava%20Vilar%20Valera,%20M2%20ECAP.pdf).
+
+<object data="Dossier Régressions Pénalisées, Yava Vilar Valera, M2 ECAP.pdf" type="application/pdf" width="100%" height="100%" style="min-height:50vh;">
+
+</object>
