@@ -1,0 +1,15 @@
+---
+title: "Assessing the empirical validity of the Kuznets Environmental Curve"
+authors: Marie Kerhoas, Yava Vilar Valera
+image: "panel.jpg"
+date: 12/31/2024
+toc: true
+---
+
+This work analyzes the empirical validity of the Kuznets environmental curve for the Latin American continent throughout the 2002–2020 period. The curve analyzes the relationship between economic growth and environmental degradation, stipulating that in the first stages of economic development, environmental pollution tends to increase, whereas once a particular territory reaches a turning point of economic wealth, the quality of the environment will improve. Comparing different panel models, a final country and year fixed effects model confirms the Kuznets theory in our study context
+You can access our project [here](panel.pdf) and below, written in French. 
+
+
+<object data="panel.pdf" type="application/pdf" width="100%" height="100%" style="min-height:50vh;">
+
+</object>
