@@ -9,7 +9,7 @@ toc: true
 knitr::opts_chunk$set(echo=TRUE, warning=FALSE, errors=FALSE, message=FALSE, results=TRUE, fig.width=8, fig.height=6)
 ```
 
-The aim of these exercises is to implement functions for analyzing historical data relating to the Olympic Games. With the functions generated, we'll be able to exploit information such as the number of medals won by each athlete during their participation in the program, the nationalities most represented at the Olympic Games and much more!
+The aim of these exercises is to implement functions for analyzing historical data relating to the Olympic Games. With the functions generated, we'll be able to exploit information such as the number of medals won by each athlete during their participation in the program, the nationalities most represented at the Olympic Games and much more.
 
 -   **Run the following command. What does the object contain?**
 

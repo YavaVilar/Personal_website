@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jasmine Dupau, Yava Vilar Valera">
-<meta name="dcterms.date" content="2024-03-15">
+<meta name="author" content="Marie Kheroas, Yava Vilar Valera">
+<meta name="dcterms.date" content="2025-02-23">
 
-<title>About the blog - Verification of Salmon Authenticity Using the PLS-DA method</title>
+<title>About the blog - Analyzing the determinants of real estate prices in France</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,13 +62,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="About the blog - Verification of Salmon Authenticity Using the PLS-DA method">
+<meta property="og:title" content="About the blog - Analyzing the determinants of real estate prices in France">
 <meta property="og:description" content="">
-<meta property="og:image" content="jsm-sea-fish.jpg">
+<meta property="og:image" content="stm.jpg">
 <meta property="og:site-name" content="About the blog">
-<meta name="twitter:title" content="About the blog - Verification of Salmon Authenticity Using the PLS-DA method">
+<meta name="twitter:title" content="About the blog - Analyzing the determinants of real estate prices in France">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="jsm-sea-fish.jpg">
+<meta name="twitter:image" content="stm.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -93,6 +93,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../academic works.html" rel="" target="">
  <span class="menu-text">Academic works</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../R.html" rel="" target="">
+ <span class="menu-text">R &amp; Python</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -114,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Verification of Salmon Authenticity Using the PLS-DA method</h1>
+      <h1 class="title">Analyzing the determinants of real estate prices in France</h1>
                       </div>
   </div>
     
@@ -124,14 +128,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Jasmine Dupau, Yava Vilar Valera </p>
+               <p>Marie Kheroas, Yava Vilar Valera </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 15, 2024</p>
+        <p class="date">February 23, 2025</p>
       </div>
     </div>
     
@@ -147,11 +151,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#descriptive-analysis" id="toc-descriptive-analysis" class="nav-link" data-scroll-target="#descriptive-analysis">1. Descriptive analysis</a></li>
-  <li><a href="#pls-da-model" id="toc-pls-da-model" class="nav-link" data-scroll-target="#pls-da-model">2. PLS-DA Model</a></li>
-  <li><a href="#performance-evaluation" id="toc-performance-evaluation" class="nav-link" data-scroll-target="#performance-evaluation">2. Performance evaluation</a></li>
-  <li><a href="#the-most-discriminating-and-interesting-chemical-elements-to-keep" id="toc-the-most-discriminating-and-interesting-chemical-elements-to-keep" class="nav-link" data-scroll-target="#the-most-discriminating-and-interesting-chemical-elements-to-keep"><strong>3.</strong> The most discriminating and interesting chemical elements to keep&nbsp;</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a>
+  <ul class="collapse">
+  <li><a href="#data-treatment" id="toc-data-treatment" class="nav-link" data-scroll-target="#data-treatment">Data treatment</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#genger-causality-test" id="toc-genger-causality-test" class="nav-link" data-scroll-target="#genger-causality-test">Genger causality test</a></li>
+  <li><a href="#shock-response-functions" id="toc-shock-response-functions" class="nav-link" data-scroll-target="#shock-response-functions">Shock Response Functions</a></li>
+  <li><a href="#variance-decomposition-of-forecast-errors" id="toc-variance-decomposition-of-forecast-errors" class="nav-link" data-scroll-target="#variance-decomposition-of-forecast-errors">Variance Decomposition of Forecast Errors</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -162,129 +172,62 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This a project we made on the PLS-DA (Partial Least Squares Discriminant Analysis) technique, a method used to classify data into groups. This approach is particularly helpful when dealing with datasets that have many variables, especially when it is necessary to separate the data into different categories. The technique works by creating latent variables, which are new variables that summarize the most relevant information from the original data. We applied this method in the context of verifying salmon authenticity, as demonstrated below.</p>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The objective of our study is to find a predictive model of salmon authenticity on the dataset from the publication “Data fusion and multivariate analysis for food authenticity analysis.” written by Hong, Y., Birse, N., Quinn, B., Li, Y., Jia, W., McCarron, P., … &amp; Elliott, C. T. in 2023. The initial dataset contains information on the 38-element chemical composition of 521 salmon from four different countries. However, elements present in extremely high quantities or too low to be measured accurately were removed from the dataset before further analysis, leaving only 20 chemical elements. Similarly, the values of these elements were normalized on a scale of 0 to 1.</p>
-<p>We decided to apply the PLS-DA (Partial Least Squares regression Discriminant Analysis) approach. This method consists in classifying individuals according to the categories of the qualitative variable Y (the origin of the salmon in our study), in a discriminating manner by finding the best possible latent variables, these being combinations of the predictors and the qualitative variable. Moreover, this approach seems particularly interesting in this analysis given that some of the chemical elements (explanatory variables) show strong multicollinearity between them, making multinomial regression inviable. To start our study, we perform a preliminary descriptive analysis to better understand the relationships between the variables and the structure of our dataset. Next, the PLS-DA model will be explored by looking for latent components or variables, with cross-validation to assess the performance of the PLS-DA model. To do this, we first set up a training sample, made up of 80% of our population, and a test sample with the remaining 20% to analyze the quality of the prediction. The model will be considered of good quality if it has a low error rate, i.e.&nbsp;when the majority of salmon rankings are validated.</p>
+<p>This study analyzes the evolution of the house price index in France between 2001 and 2019, using a structural variable (SVAR) model. The motivation stems from growing concerns about the sustained rise in house prices, which has been higher than consumer price growth in OECD countries. In France, the house price index has increased significantly, from 80.5 in 2000 to 131.7 in 2022, generating significant economic and social effects, such as greater inequality in access to housing between different economic strata, rising cost of living and reduced household consumption, and greater population indebtedness.</p>
+<p>In response to this problem, the study aims to identify the macroeconomic determinants that influence house prices in France at the national level, analyzing how structural shocks to key variables affect their evolution.</p>
+<p>Below you can find a summary of the data, methodology and key findings, and you can access the whole document <a href="Séries Temporelles M.pdf">here</a>.</p>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>Quarterly data from 2001 to 2019 were used from INSEE and the Crédit Logement/CSA Observatory. The three variables selected for the analysis were:</p>
+<ol type="1">
+<li>House Price Index (HPI): Represents the index of new and existing housing prices in metropolitan France.</li>
+<li>Mortgage Credit Rate (Tx_CIP): Captures the financing costs for home purchases.</li>
+<li>Gross Disposable Income (GDI): Represents the amount of income available to households after taxes and social security contributions.</li>
+</ol>
+<section id="data-treatment" class="level3">
+<h3 class="anchored" data-anchor-id="data-treatment">Data treatment</h3>
+<p>A stationarity test was performed using the Dickey-Fuller (DFT) test, revealing that the housing price index and gross disposable income are non-stationary series and were transformed into growth rates for the analysis. Similarly, an outlier was detected in the PPI in the fourth quarter of 2016, but it was considered valid because it represents an economic event and not a measurement mistake. Finally, the presence of seasonality in the series was ruled out.</p>
 </section>
-<section id="descriptive-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="descriptive-analysis">1. Descriptive analysis</h3>
-<p>As introduced, descriptive analysis is an essential step prior to any type of work on a database. We begin by projecting a histogram of the dependent qualitative variable “Class”, which indicates the country of origin of each salmon, available in Figure 1. In addition, the origin of these fish is distributed according to the two different production methods.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1: Salmon by country and production method</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/clipboard-1846701600.png" class="img-fluid figure-img" width="566"></p>
-</figure>
-</div>
-<p>Looking at the distribution of this variable, we can see that farmed salmon are the most represented, with the Scottish and Norwegian countries alone recording almost 300 salmon, accompanied by 90 Irish salmon. Wild-caught salmon, represented by Alaska and Ireland, are in the minority, with overall numbers hovering around 150 salmon, or half the number of the other production method.</p>
-<p>Next, we find it interesting to understand this distribution through the analysis of chemical elements, which will enable us to highlight the particularities of each country. To do this, we decided to represent the distribution of each chemical element with boxplots in Figure 2.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2: Statistical distribution of chemical elements</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/clipboard-3794984116.png" class="img-fluid figure-img" width="543"></p>
-</figure>
-</div>
-<p>We observe that a group of variables made up of “Al”, “Cr”, “Cu”, “Fe”, “Co”, “Mn”, “Mo”, “Ni”, “Sr” and “V” show very distant points. After analysis, the salmon from the fishery meet these characteristics. Alaskan salmon, for example, are very rich in copper, molybdenum and nickel. Icelandic salmon are also highly concentrated in iron, strontium and vanadium.</p>
-<p>Finally, analysis of the relationships between predictors using correlation calculations informs us that a number of variables are strongly positively correlated with each other, such as “Zn” and “Se”, “Se” and “Rb” or “Rb” and “Cs”. This strong collinearity reinforces the use of PLS-DA regression in this study.</p>
 </section>
-<section id="pls-da-model" class="level3">
-<h3 class="anchored" data-anchor-id="pls-da-model">2. PLS-DA Model</h3>
-<p>Before performing the classification, we split the database into a training set, with 80% of all observations, and a test set, with the remaining 20% of observations. First, the PLS-DA model was run on the training set using the MixOmics library. For dimension reduction, we selected the 20 initial components, corresponding to the 20 predictors, which helped us to visualize and identify the most appropriate number of components to minimize the classification error rate while resulting in a parsimonious model. Parsimony suggests that, among models that are equally effective at explaining or predicting data, the one that is simplest or uses the fewest variables is preferred. This translates into the search for models that perform well, but are no more complex than necessary. Model simplicity can help avoid over-fitting, when a model over-fits training data and has difficulty generalizing to new data. Figure 3 shows the classification error rate as a function of the number of components or dimensions. The error rate decreases significantly up to dimension 5, with a value equal to 0.06, then increases slightly and decreases again insignificantly. We would have to enlarge up to component 18 to find an error value smaller than that provided by dimension 5, however, this does not seem appropriate given the relevance of the parsimony criterion.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3: Classification error rate as a function of the number of components</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/clipboard-1361032355.png" class="img-fluid figure-img" width="552"></p>
-</figure>
-</div>
-<p>On the other hand, Figure 4 shows the salmon rankings performed on five dimensions. We can see that only individuals 98 and 25, belonging to Alaskan, failed to group correctly. We can also see that the Norway, Scotland and Iceland-F groups do not have a clear separation, which could mislead the prediction.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4: PLS-DA on five dimensions</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/clipboard-1936891644.png" class="img-fluid figure-img" width="517"></p>
-</figure>
-</div>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>To analyze the relationship between variables, a structural VAR model (SVAR) was used. This model allows to identify the causal impact of economic shocks on housing prices and decompose the effects of each variable on the others using the Cholesky decomposition.</p>
+<p>To identify shocks in the SVAR model, the following hierarchical order of variables was established based on economic theory:</p>
+<ol type="1">
+<li>Gross disposable income (GDI): This is considered the most exogenous variable, as it directly affects housing demand and credit, but is not immediately impacted by other variables.</li>
+<li>Mortgage lending rate (Tx_CIP): This is affected by household income, but does not immediately influence it.</li>
+<li>House Price Index (HPI): The most endogenous variable, as it responds to changes in credit and income, but does not immediately affect them.</li>
+</ol>
 </section>
-<section id="performance-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="performance-evaluation">2. Performance evaluation</h3>
-<p>The test sample was then used to check the model’s performance. The “overall”, “max.dist”, “centroids.dist” and “mahalanobis.dist” metrics are commonly used, with distinct performance measurement methods, to assess the quality of the PLS-DA model in terms of its ability to distinguish different groups. We select the “max.dist” metric as it stands out from the other metrics for its objective of maximizing the separation between classes, which is a key criterion in our study for achieving a clear distinction between them. In addition, in Figure 5 it provides the ideal number of components described above. This distance metric reveals an accuracy rate of 0.95 and an error rate of 0.049.</p>
-<p>Similarly, a confusion matrix was run on Table 1 to visualize the distribution of salmon between their initial classes and those predicted by the model. Only one salmon was predicted for Norway and one for Scotland while belonging to the Iceland-F class, and three salmon for Scotland while belonging to Norway. These results confirm the model’s ability to distinguish between classes and its accuracy. This is confirmed by Figure 5, which shows the ROC (Recieving Operating Characteristic) curve. Indeed, all the lines corresponding to the different classes provide information on the quality of the specificity and sensitivity indices, which are very good in view of the very high curves, also indicating AUC values close to 1.</p>
-<table class="table">
-<caption>Tabe 1: Confusion matrix PLS-DA</caption>
-<thead>
-<tr class="header">
-<th></th>
-<th>Alaskan</th>
-<th>Iceland-F</th>
-<th>Iceland-W</th>
-<th>Norway</th>
-<th>Scotland</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Alaskan</td>
-<td><strong>19</strong></td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>Iceland-F</td>
-<td>0</td>
-<td><strong>9</strong></td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>Iceland-W</td>
-<td>0</td>
-<td>0</td>
-<td><strong>18</strong></td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>Norway</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td><strong>18</strong></td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>Scotland</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td><strong>35</strong></td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 5: ROC Curve</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/clipboard-1771343391.png" class="img-fluid figure-img" width="521"></p>
-</figure>
-</div>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="genger-causality-test" class="level3">
+<h3 class="anchored" data-anchor-id="genger-causality-test">Genger causality test</h3>
+<p>To start with, we applied the Genger causality test, which allows us to determine whether a time series helps predict another one, evaluating whether past values ​​of a variable X contain useful information for predicting future values ​​of another variable Y, beyond the information already provided by variable Y itself. If so, X is said to “Granger-cause” Y. The results have shown that:</p>
+<ul>
+<li><p>Growth in the house price index Genger causes changes in the mortgage lending rate and gross disposable income.</p></li>
+<li><p>The mortgage lending rate causes changes in house prices and gross disposable income.</p></li>
+<li><p>Gross disposable income does not cause house prices or the lending rate.</p></li>
+<li><p>The lending rate and disposable income jointly cause the house price index.</p>
+<h3 id="section" class="anchored"></h3></li>
+</ul>
 </section>
-<section id="the-most-discriminating-and-interesting-chemical-elements-to-keep" class="level3">
-<h3 class="anchored" data-anchor-id="the-most-discriminating-and-interesting-chemical-elements-to-keep"><strong>3.</strong> The most discriminating and interesting chemical elements to keep&nbsp;</h3>
-<p>Finally, we identify the important variables for class prediction by studying their weights on all five components.</p>
-<p>In Figure 6, we can see that the most discriminating chemical elements, with an error rate of 6%, are, in order of importance, boron, lithium, cadium, carbon monoxide, selenium, iron and caesium.&nbsp;</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 6: Variables contribution to components</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/clipboard-4205849119.png" class="img-fluid figure-img" width="457"></p>
-</figure>
-</div>
+<section id="shock-response-functions" class="level3">
+<h3 class="anchored" data-anchor-id="shock-response-functions">Shock Response Functions</h3>
+<p>Impulse Response Functions (IRFs) analyze how one variable responds to an unexpected change in another within a dynamic system. When an exogenous shock occurs, such as a sudden increase in interest rates, IRFs show how this disturbance affects other variables, such as housing prices. Through graphs, these functions reveal the magnitude, duration, and direction of the impact. When confidence intervals do not contain zero, the impact is significant.</p>
+<p>The Shock Response Funtions of our study are available in figure 1 and show that a positive shock to gross disposable income increases the growth of the house price index briefly and temporarily (approximately two quarters). On the contrary, a positive shock to the mortgage lending rate persistently reduces the growth of the house price index, with a significant negative impact for seven quarters. Finally, a shock to the house price index generates a positive impact on its own growth for up to five quarters, indicating an inertia effect in the market.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1: Shock Response Functions</p>
+<p><img src="images/clipboard-909276810.png" class="img-fluid"></p>
 </section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>To conclude, the study consisted in predicting the geographical origin of the salmon in the database using PLS-DA regression. Before applying the prediction model, we carried out a univariate descriptive analysis of our qualitative variable “Class”, which enabled us to observe the distribution of the four countries to be discriminated and to discover which production mode was most represented. We then proceeded with the five-component PLS-DA analysis, built on the training set with the “max.dist” metric. We obtained a high-performance model with good predictive quality, presenting an AUC close to 1 for each group to be discriminated, accompanied by a very low error rate of 4%. The chemical elements that emerged as the most discriminating were lithium, boron, iron, carbon monoxide, selenium, cadmium and cesium. However, class separation was not very clear-cut. Similarly, it would have been interesting to perform a discriminant factor analysis (DFA) to compare and complete our interpretation of the discriminating power of the predictors.</p>
+<section id="variance-decomposition-of-forecast-errors" class="level3">
+<h3 class="anchored" data-anchor-id="variance-decomposition-of-forecast-errors">Variance Decomposition of Forecast Errors</h3>
+<p>Finally, the variance decomposition of forecast errors allows us to understand how much of the future variability of a variable is due to shocks in itself and how much is explained by shocks in other variables. Figure 2 reveals that, in the short term (horizon 1), the growth of the house price index is explained by 95% of its own history. In the long term (horizon 10), the mortgage loan rate explains up to 33% of the variability in the house price index, while gross disposable income has a much smaller impact (6%). It is noteworthy that the impact of income and the housing price index itself diminishes over time, while mortgage credit becomes progressively more important in the early periods.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2: Variance Decomposition of Forecast Errors</p>
+<p><img src="images/clipboard-3520092382.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In conclusion, the study highlights the crucial role of monetary policy and interest rates, as well as the lesser influence of household income, in regulating the French real estate market. It is particularly recommended that interest rate developments be considered as a mechanism to control inflation in the housing sector and avoid real estate bubbles that could lead to economic crises.</p>
 
 
 </section>

@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo=TRUE, warning=FALSE, errors=FALSE, message=FALSE, res
 
 ```
 
-This tutorial focuses on learning how to import files in formats that can handle large databases. Similarly, the ***dplyr***, ***tidyr***, ***string*** and ***lubridate*** libraries will be used to analyze information relating to the historic Olympic Games.
+These exercises show how to import files in formats that can handle large databases. Similarly, the ***dplyr***, ***tidyr***, ***string*** and ***lubridate*** libraries will be used to analyze information relating to the historic Olympic Games.
 
 ```{r, eval=FALSE}
 install.packages("RSQLite")

@@ -4,7 +4,7 @@ date: "04/01/2024"
 author: Yava Vilar Valera
 ---
 
-Python Dash, developed by Plotly, allows you to create interactive web applications and visualize data. I learned how to make this kind of presentation during the first year of my Master. Below you will find an example of a coded model using a given database on the sales of a company along with its resulting outputs, which, when executed with Python, provide interactive and dynamic graphics.
+Python Dash, developed by Plotly, allows us to create interactive web applications and visualize data. Below you will find an example of a coded model using a given database on the sales of a company alongside its resulting outputs, which, when executed with Python, provide interactive and dynamic graphics.
 
 ```{r, eval=FALSE}
 

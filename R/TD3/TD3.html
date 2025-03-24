@@ -19,7 +19,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
@@ -124,21 +124,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../../academic works.html" rel="" target="">
  <span class="menu-text">Academic works</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../R.html" rel="" target="">
  <span class="menu-text">R &amp; Python</span></a>
-  </li>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../About the blog.html" rel="" target="">
  <span class="menu-text">About</span></a>
-  </li>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/yava-vilar-valera-496999271/" rel="" target="">
  <span class="menu-text"></span></a>
-  </li>
+  </li>  
 </ul>
             <div class="quarto-navbar-tools">
 </div>
@@ -153,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
-
+   
   <ul>
   <li><a href="#dplyr-tidyr-packages" id="toc-dplyr-tidyr-packages" class="nav-link active" data-scroll-target="#dplyr-tidyr-packages">Dplyr, tidyr packages</a></li>
   <li><a href="#stringr-lubridate-packages" id="toc-stringr-lubridate-packages" class="nav-link" data-scroll-target="#stringr-lubridate-packages">Stringr, lubridate packages</a></li>
@@ -178,21 +178,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
              <p>Yava Vilar Valera </p>
           </div>
   </div>
-
+    
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
       <p class="date">March 1, 2024</p>
     </div>
   </div>
-
-
+  
+    
   </div>
-
+  
 
 </header>
 
-<p>This tutorial focuses on learning how to import files in formats that can handle large databases. Similarly, the <strong><em>dplyr</em></strong>, <strong><em>tidyr</em></strong>, <strong><em>string</em></strong> and <strong><em>lubridate</em></strong> libraries will be used to analyze information relating to the historic Olympic Games.</p>
+<p>These exercises show how to import files in formats that can handle large databases. Similarly, the <strong><em>dplyr</em></strong>, <strong><em>tidyr</em></strong>, <strong><em>string</em></strong> and <strong><em>lubridate</em></strong> libraries will be used to analyze information relating to the historic Olympic Games.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"RSQLite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -267,9 +267,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(tables) <span class="do">##Tables: Tokyo_medals et Tokyo_teams</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "C:/Users/yavav/OneDrive - Universitat de València/__MACOSX/olympics_athletes.json"
-[2] "olympics_athletes"
-[3] "tokyo_athletes"
-[4] "tokyo_medals"
+[2] "olympics_athletes"                                                                
+[3] "tokyo_athletes"                                                                   
+[4] "tokyo_medals"                                                                     
 [5] "tokyo_teams"                                                                      </code></pre>
 </div>
 </div>
@@ -288,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher la liste des colonnes</span></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(colonnes_olympics_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "ID"     "Name"   "Sex"    "Age"    "Height" "Weight" "Team"   "NOC"
+<pre><code> [1] "ID"     "Name"   "Sex"    "Age"    "Height" "Weight" "Team"   "NOC"   
  [9] "Games"  "City"   "Sport"  "Event"  "Medal" </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>colonnes_tokyo_athletes <span class="ot">&lt;-</span> <span class="fu">dbListFields</span>(con, <span class="st">"tokyo_athletes"</span>)</span>
@@ -343,7 +343,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">separate_wider_delim</span>(tibble_olympics_athletes, <span class="at">cols =</span> Games, <span class="at">delim=</span> <span class="st">" "</span>, <span class="at">names=</span><span class="fu">c</span>(<span class="st">"Year"</span>, <span class="st">"isSummer"</span>), <span class="at">cols_remove =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 269,731 × 15
-      ID Name   Sex     Age Height Weight Team  NOC   Year  isSummer Games City
+      ID Name   Sex     Age Height Weight Team  NOC   Year  isSummer Games City 
    &lt;int&gt; &lt;chr&gt;  &lt;fct&gt; &lt;int&gt;  &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;
  1     1 A Dij… M        24    180     80 China CHN   1992  Summer   1992… Barc…
  2     2 A Lam… M        23    170     60 China CHN   2012  Summer   2012… Lond…
@@ -417,8 +417,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>tibble_olympics_athletes <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Sex<span class="sc">==</span><span class="st">"F"</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(Height)) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(Height, Sport) <span class="co">#On filtre les femmes, on ordonne et sélectionne la ligne ainsi que les variables d'intérêt. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
-  Height Sport
-   &lt;int&gt; &lt;chr&gt;
+  Height Sport     
+   &lt;int&gt; &lt;chr&gt;     
 1    213 Basketball</code></pre>
 </div>
 </div>
@@ -432,18 +432,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 45 × 3
 # Groups:   Games [45]
-   Games       Height Sport
-   &lt;chr&gt;        &lt;int&gt; &lt;chr&gt;
- 1 1920 Summer    175 Diving
- 2 1924 Summer    175 Fencing
+   Games       Height Sport         
+   &lt;chr&gt;        &lt;int&gt; &lt;chr&gt;         
+ 1 1920 Summer    175 Diving        
+ 2 1924 Summer    175 Fencing       
  3 1924 Winter    165 Figure Skating
- 4 1928 Summer    183 Fencing
+ 4 1928 Summer    183 Fencing       
  5 1928 Winter    165 Figure Skating
- 6 1932 Summer    183 Fencing
+ 6 1932 Summer    183 Fencing       
  7 1932 Winter    168 Figure Skating
- 8 1936 Summer    183 Fencing
+ 8 1936 Summer    183 Fencing       
  9 1936 Winter    168 Figure Skating
-10 1948 Summer    180 Athletics
+10 1948 Summer    180 Athletics     
 # ℹ 35 more rows</code></pre>
 </div>
 </div>
@@ -455,15 +455,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Height)) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(Games, Height, Sport) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(Sport) <span class="sc">%&gt;%</span> <span class="fu">table</span>() <span class="co">#On extrait la colonne sport et fait un tablau de fréquence. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>.
-       Alpine Skiing            Athletics           Basketball
-                   3                    5                    9
-           Bobsleigh Cross Country Skiing               Diving
-                   3                    4                    1
-             Fencing       Figure Skating           Ice Hockey
-                   4                    4                    1
-                Luge        Speed Skating             Swimming
-                   3                    4                    1
-          Volleyball
+       Alpine Skiing            Athletics           Basketball 
+                   3                    5                    9 
+           Bobsleigh Cross Country Skiing               Diving 
+                   3                    4                    1 
+             Fencing       Figure Skating           Ice Hockey 
+                   4                    4                    1 
+                Luge        Speed Skating             Swimming 
+                   3                    4                    1 
+          Volleyball 
                    3 </code></pre>
 </div>
 </div>
@@ -486,7 +486,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(texte, <span class="st">"</span><span class="sc">\\</span><span class="st">b(</span><span class="sc">\\</span><span class="st">d{1,2} </span><span class="sc">\\</span><span class="st">w+ </span><span class="sc">\\</span><span class="st">d{4})</span><span class="sc">\\</span><span class="st">b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-[1] "5 Août 2016"     "20 Août 2016"    "23 Juillet 2021" "8 Août 2021"
+[1] "5 Août 2016"     "20 Août 2016"    "23 Juillet 2021" "8 Août 2021"    
 [5] "26 Juillet 2024" "11 Août 2024"   </code></pre>
 </div>
 </div>
@@ -576,7 +576,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       toggleBodyColorMode(bsSheetEl);
     }
   }
-  toggleBodyColorPrimary();
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -586,7 +586,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {
+      if (clz.startsWith('code-annotation-')) {                     
         return true;
       }
     }
@@ -617,11 +617,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
       button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button,
-        { trigger: "manual",
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
           offset: [0, -8]});
-      tooltip.show();
+      tooltip.show();    
     }
     setTimeout(function() {
       if (tooltip) {
@@ -651,7 +651,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       theme: 'quarto',
       placement: 'bottom-start'
     };
-    window.tippy(el, config);
+    window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
@@ -696,7 +696,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             height = bottom - top;
           }
           if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it
+            // cook up a div (if necessary) and position it 
             let div = window.document.getElementById("code-annotation-line-highlight");
             if (div === null) {
               div = window.document.createElement("div");
@@ -797,9 +797,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="https://www.quarto.org">Built with Quarto | R Studio</a>
-  </li>
+  </li>  
 </ul>
-    </div>
+    </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>

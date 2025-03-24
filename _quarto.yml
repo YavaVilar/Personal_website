@@ -8,7 +8,7 @@ website:
   open-graph: true
   navbar:
         title: "Yava Vilar Valera"
-        background: "darkslategray"
+        background: "black"
         foreground: "#FFFFFF"
         pinned: true
         right:
@@ -17,6 +17,7 @@ website:
          - href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
         left:
          - href: academic works.qmd
+         - href: R.qmd
 
   page-footer:
     left:
