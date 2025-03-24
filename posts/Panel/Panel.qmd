@@ -6,7 +6,7 @@ author: Marie Kerhoas, Yava Vilar Valera
 toc: true
 ---
 
-This study examines the empirical validity of the Environmental Kuznets Curve for Latin America and the Caribbean over the period 2002–2020. The curve explores the relationship between economic growth and environmental degradation, suggesting that in the early stages of economic development, environmental pollution tends to increase. However, once a given region reaches a certain level of economic wealth, environmental quality begins to improve.
+This study examines the empirical validity of the Environmental Kuznets Curve for Latin America and the Caribbean region over the period 2002–2020. The curve explores the relationship between economic growth and environmental degradation, suggesting that in the early stages of economic development, environmental pollution tends to increase. However, once a given region reaches a certain level of economic wealth, environmental quality begins to improve.
 
 By comparing different panel models, our final fixed-effects model (accounting for both country and year) confirms the Kuznets hypothesis in our study context.
 

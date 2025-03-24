@@ -23,7 +23,7 @@ Y*it* = α + β1𝑇𝑟𝑒𝑎𝑡𝑚𝑒𝑛𝑡𝑖 + β2𝑃𝑜𝑠𝑡�
 
 Where 𝑌 reflects the outcome of interest (cough prevalence) for individual 𝑖 at time 𝑡; α is a constant; β the coefficient of each correspondent variable; 𝑇𝑟𝑒𝑎𝑡𝑚𝑒𝑛𝑡 indicates whether the child belongs to the treatment group (1 if that is the case, 0 otherwise); and 𝑃𝑜𝑠𝑡 takes the value 1 if individuals belong to the post-earthquake period, 0 if not. X corresponds to a set of control variables and D represents region fixed effects. Finally, ϵ is the error term.
 
-### 4. Results
+### Results
 
 Findings have demonstrated a significant impact up to a distance of 80 kilometers. Table 1 presents the estimates obtained from the above equation considering this distance range. β3 , the coefficient corresponding to the variable *Treatment\*After*, is the DiD estimator which measures the causal effect of the treatment. Its significance at the 10% threshold indicates a significant difference, over the two periods analyzed, in the cough rate in the areas affected by the earthquake relative to non-affected regions. The positiveness of the sign indicates that being within 80 kilometers in the post-treatment group increases the likelihood of coughing compared to the remaining areas.
 
