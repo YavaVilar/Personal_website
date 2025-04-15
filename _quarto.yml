@@ -3,16 +3,13 @@ project:
   output-dir: .
 
 website:
-  title: "About the blog"
   twitter-card: true
   open-graph: true
   navbar:
-        title: "Yava Vilar Valera"
         background: "black"
         foreground: "#FFFFFF"
-        pinned: true
         right:
-         - href: About the blog.qmd
+         - href: about me.qmd
          - icon: linkedin
          - href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
         left:
