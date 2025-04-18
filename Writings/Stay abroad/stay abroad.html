@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Marie Kerhoas, Yava Vilar Valera">
-<meta name="dcterms.date" content="2025-02-23">
 
-<title>Analyzing the determinants of real estate prices in France</title>
+<title>Being a student far away: what doesn’t fit in a suitcase</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,16 +61,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Analyzing the determinants of real estate prices in France">
+<meta property="og:title" content="Being a student far away: what doesn’t fit in a suitcase">
 <meta property="og:description" content="">
-<meta property="og:image" content="stm.jpg">
-<meta name="twitter:title" content="Analyzing the determinants of real estate prices in France">
+<meta property="og:image" content="ryanair.jpg">
+<meta name="twitter:title" content="Being a student far away: what doesn’t fit in a suitcase">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="stm.jpg">
+<meta name="twitter:image" content="ryanair.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -114,122 +112,49 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Analyzing the determinants of real estate prices in France</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Marie Kerhoas, Yava Vilar Valera </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">February 23, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a>
-  <ul class="collapse">
-  <li><a href="#data-treatment" id="toc-data-treatment" class="nav-link" data-scroll-target="#data-treatment">Data treatment</a></li>
-  </ul></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
-  <ul class="collapse">
-  <li><a href="#genger-causality-test" id="toc-genger-causality-test" class="nav-link" data-scroll-target="#genger-causality-test">Genger causality test</a></li>
-  <li><a href="#shock-response-functions" id="toc-shock-response-functions" class="nav-link" data-scroll-target="#shock-response-functions">Shock Response Functions</a></li>
-  <li><a href="#variance-decomposition-of-forecast-errors" id="toc-variance-decomposition-of-forecast-errors" class="nav-link" data-scroll-target="#variance-decomposition-of-forecast-errors">Variance Decomposition of Forecast Errors</a></li>
-  </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Being a student far away: what doesn’t fit in a suitcase</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>This study analyzes the evolution of the house price index in France between 2001 and 2019, using a structural variable (SVAR) model. The motivation stems from growing concerns about the sustained rise in house prices, which has been higher than consumer price growth in OECD countries. In France, the house price index has increased significantly, from 80.5 in 2000 to 131.7 in 2022, generating significant economic and social effects, such as greater inequality in access to housing between different economic strata, rising cost of living and reduced household consumption, and greater population indebtedness.</p>
-<p>In response to this problem, the study aims to identify the macroeconomic determinants that influence house prices in France at the national level, analyzing how structural shocks to key variables affect their evolution.</p>
-<p>Below you can find a summary of the data, methodology and key findings, and you can access the whole document <a href="Séries Temporelles M.pdf">here</a>.</p>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>Quarterly data from 2001 to 2019 were used from INSEE and the Crédit Logement/CSA Observatory. The three variables selected for the analysis were:</p>
-<ol type="1">
-<li>House Price Index (HPI): Represents the index of new and existing housing prices in metropolitan France.</li>
-<li>Mortgage Credit Rate (Tx_CIP): Captures the financing costs for home purchases.</li>
-<li>Gross Disposable Income (GDI): Represents the amount of income available to households after taxes and social security contributions.</li>
-</ol>
-<section id="data-treatment" class="level3">
-<h3 class="anchored" data-anchor-id="data-treatment">Data treatment</h3>
-<p>A stationarity test was performed using the Dickey-Fuller (DFT) test, revealing that the housing price index and gross disposable income are non-stationary series and were transformed into growth rates for the analysis. Similarly, an outlier was detected in the PPI in the fourth quarter of 2016, but it was considered valid because it represents an economic event and not a measurement mistake. Finally, the presence of seasonality in the series was ruled out.</p>
-</section>
-</section>
-<section id="methodology" class="level2">
-<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<p>To analyze the relationship between variables, a structural VAR model (SVAR) was used. This model allows to identify the causal impact of economic shocks on housing prices and decompose the effects of each variable on the others using the Cholesky decomposition.</p>
-<p>To identify shocks in the SVAR model, the following hierarchical order of variables was established based on economic theory:</p>
-<ol type="1">
-<li>Gross disposable income (GDI): This is considered the most exogenous variable, as it directly affects housing demand and credit, but is not immediately impacted by other variables.</li>
-<li>Mortgage lending rate (Tx_CIP): This is affected by household income, but does not immediately influence it.</li>
-<li>House Price Index (HPI): The most endogenous variable, as it responds to changes in credit and income, but does not immediately affect them.</li>
-</ol>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<section id="genger-causality-test" class="level3">
-<h3 class="anchored" data-anchor-id="genger-causality-test">Genger causality test</h3>
-<p>To start with, we applied the Genger causality test, which allows us to determine whether a time series helps predict another one, evaluating whether past values ​​of a variable X contain useful information for predicting future values ​​of another variable Y, beyond the information already provided by variable Y itself. If so, X is said to “Granger-cause” Y. The results have shown that:</p>
-<ul>
-<li><p>Growth in the house price index Genger causes changes in the mortgage lending rate and gross disposable income.</p></li>
-<li><p>The mortgage lending rate causes changes in house prices and gross disposable income.</p></li>
-<li><p>Gross disposable income does not cause house prices or the lending rate.</p></li>
-<li><p>The lending rate and disposable income jointly cause the house price index.</p>
-<h3 id="section" class="anchored"></h3></li>
-</ul>
-</section>
-<section id="shock-response-functions" class="level3">
-<h3 class="anchored" data-anchor-id="shock-response-functions">Shock Response Functions</h3>
-<p>Impulse Response Functions (IRFs) analyze how one variable responds to an unexpected change in another within a dynamic system. When an exogenous shock occurs, such as a sudden increase in interest rates, IRFs show how this disturbance affects other variables, such as housing prices. Through graphs, these functions reveal the magnitude, duration, and direction of the impact. When confidence intervals do not contain zero, the impact is significant.</p>
-<p>The Shock Response Funtions of our study are available in figure 1 and show that a positive shock to gross disposable income increases the growth of the house price index briefly and temporarily (approximately two quarters). On the contrary, a positive shock to the mortgage lending rate persistently reduces the growth of the house price index, with a significant negative impact for seven quarters. Finally, a shock to the house price index generates a positive impact on its own growth for up to five quarters, indicating an inertia effect in the market.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1: Shock Response Functions</p>
-<p><img src="images/clipboard-909276810.png" class="img-fluid"></p>
-</section>
-<section id="variance-decomposition-of-forecast-errors" class="level3">
-<h3 class="anchored" data-anchor-id="variance-decomposition-of-forecast-errors">Variance Decomposition of Forecast Errors</h3>
-<p>Finally, the variance decomposition of forecast errors allows us to understand how much of the future variability of a variable is due to shocks in itself and how much is explained by shocks in other variables. Figure 2 reveals that, in the short term (horizon 1), the growth of the house price index is explained by 95% of its own history. In the long term (horizon 10), the mortgage loan rate explains up to 33% of the variability in the house price index, while gross disposable income has a much smaller impact (6%). It is noteworthy that the impact of income and the housing price index itself diminishes over time, while mortgage credit becomes progressively more important in the early periods.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2: Variance Decomposition of Forecast Errors</p>
-<p><img src="images/clipboard-3520092382.png" class="img-fluid"></p>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In conclusion, the study highlights the crucial role of monetary policy and interest rates, as well as the lesser influence of household income, in regulating the French real estate market. It is particularly recommended that interest rate developments be considered as a mechanism to control inflation in the housing sector and avoid real estate bubbles that could lead to economic crises.</p>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>When I decided to study abroad, I packed my suitcases with great enthusiasm, happy to be able to complete a journey that I had long awaited.</p>
+<p>I calculated what I would need, I packed clothes, blankets, personal belongings, books. Knowing what to leave and what to pack was almost an art: I should not overpack, but nothing could be missing either.</p>
+<p>What I didn’t know was everything that would come with me without being packed. Everything that cannot be measured or weighed.</p>
+<p>It is the feelings, the moments, the people.</p>
+<p>The illusion and curiosity was what most characterized my beginning, before the first flight. I was nervous, intrigued by the new, I felt strong, capable, and with a lot of determination.</p>
+<p>Then came the first flight. I had the privilege of being accompanied by my parents, until they left. The moment when the first cry came. I was alone in front of the new, a new country. No more living under their shelter and protection. Maybe it was the pain of love, union and separation at the same time.</p>
+<p>Soon I overcame that first break with the familiar, although new forms of farewell awaited me later.</p>
+<p>New challenges. Studies, it was difficult, I was perfectionist. Friendships, there were many from my culture, I got along with others. The rain, I liked the sun.</p>
+<p>I can’t fit in my suitcase the times I felt strong for solving something, alone. For creating a friendship. For passing an exam. For knowing how to ask questions.</p>
+<p>There is no room for the moments of doubt, of emptiness. Nor the moments of clarity and purpose. I had many clear things, that stopped making sense, until they gained strength again.</p>
+<p>One year passed, and another one came. Another one in which I would never fit in my suitcase the great number of people I met, who touched my soul. Those who let themselves be known, and who helped me let myself be known.</p>
+<p>The suitcase is too small for the immensity that they brought me. The parties, the dances, the hugs, the love.</p>
+<p>My thoughts in double language do not enter, nor the links I created with my faculty, nor the days of companionship classes. With them, with people of the country. Nor the endless projects that, as well as restlessness, brought me a lot of learning.</p>
+<p>The last year has arrived. And I’m still here, with no room for each additional day, full of a new adventure, a new discovery, a new emotion.</p>
+<p>Anxiety, nostalgia, uncertainty, fear and illusion. These are feelings that could not enter, that first day, and that will not be able to enter either, in the return. But they are always present.</p>
+<p>The people, the experiences, the bumps, the mistakes, the learning, the progress. All this characterizes my stay abroad, and will always come with me, even if they don’t check it at the airport, even if they don’t understand it when I return, even if sometimes I don’t even know how to explain it.</p>
+<p>My suitcase will come back lighter, but not me.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

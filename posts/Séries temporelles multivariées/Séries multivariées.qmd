@@ -2,7 +2,7 @@
 title: "Analyzing the determinants of real estate prices in France"
 image: "stm.jpg"
 date: 02/23/2025
-author: Marie Kheroas, Yava Vilar Valera
+author: Marie Kerhoas, Yava Vilar Valera
 toc: true
 ---
 
@@ -10,7 +10,7 @@ This study analyzes the evolution of the house price index in France between 200
 
 In response to this problem, the study aims to identify the macroeconomic determinants that influence house prices in France at the national level, analyzing how structural shocks to key variables affect their evolution.
 
-Below you can find a summary of the data, methodology and key findings, and you can access the whole document [here](Séries Temporelles M.pdf).
+Below you can find a summary of the data, methodology and key findings, and you can access the whole document [here](Séries%20Temporelles%20M.pdf).
 
 ## Data
 
