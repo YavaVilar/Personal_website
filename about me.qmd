@@ -11,7 +11,6 @@ about:
 ---
 
 ::: column-page
-
 Born in Valencia, Spain, I grew up in Navaluenga, a small village in the province of Ávila, Spain. I later moved to Belgium where I lived for three years and learned French. In 2020, I began my degree in Economics at the [Universitat de València](https://www.uv.es/). Two years later I enrolled in an International Double Degree program with [Nantes Université](https://www.univ-nantes.fr/). This unique opportunity allowed me to obtain my Bachelor in Economics from both universities in 2024.
 
 Currently, I am pursuing a Master's degree in [Econometrics and Statistics](https://sites.google.com/view/master-ecap/accueil) at Nantes University, where I have acquired extensive skills in software and data management, in addition to enhancing my statistical abilities to analyze economic issues.
@@ -20,6 +19,5 @@ I define myself as a very passionate and motivated student, with a strong willin
 
 Outside of academia, I dedicate part of my free time to music and dancing, which are among my greatest passions.
 
-You can find a version of my CV [here](yava cv.pdf). 
-
+You can find a version of my CV [here](yava%20cv.pdf).
 :::

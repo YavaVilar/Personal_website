@@ -1,6 +1,9 @@
 ---
 title: "Being a student far away: what doesn't fit in a suitcase"
-image: "ryanair.jpg"
+
+image: "maleta.avif"
+
+date: 04/19/2025
 ---
 
 When I decided to study abroad, I packed my suitcases with great enthusiasm, happy to be able to complete a journey that I had long awaited. 
