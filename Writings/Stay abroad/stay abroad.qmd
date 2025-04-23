@@ -1,8 +1,6 @@
 ---
 title: "Being a student far away: what doesn't fit in a suitcase"
-
 image: "maleta.avif"
-
 date: 04/19/2025
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Assessing the empirical validity of the Kuznets Environmental Curve"
+title: "Assessing the Empirical Validity of the Kuznets Environmental Curve"
 image: "panel.jpg"
 date: 12/31/2024
 author: Marie Kerhoas, Yava Vilar Valera

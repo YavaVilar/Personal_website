@@ -1,6 +1,6 @@
 ---
 title: "About me"
-image: "Yava castillo.jpeg"
+image: "foto gradu.png"
 about:
   template: trestles
   links:

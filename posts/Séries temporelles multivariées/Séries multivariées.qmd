@@ -1,5 +1,5 @@
 ---
-title: "Analyzing the determinants of real estate prices in France"
+title: "Analyzing the Determinants of Real Estate Prices in France"
 image: "stm.jpg"
 date: 02/23/2025
 author: Marie Kerhoas, Yava Vilar Valera
