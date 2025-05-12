@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -96,11 +96,9 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Writings">
 <meta property="og:description" content="Short pieces of writing based on my personal experience">
-<meta property="og:image" content="./Writings/Stay abroad/maleta.avif">
 <meta name="twitter:title" content="Writings">
 <meta name="twitter:description" content="Short pieces of writing based on my personal experience">
-<meta name="twitter:image" content="./Writings/Stay abroad/maleta.avif">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -172,31 +170,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1745013600000" data-listing-file-modified-sort="1745084332862" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./Writings/Stay abroad/stay abroad.html"> <img src="./Writings/Stay abroad/maleta.avif" class="thumbnail-image" style="height: 150px;"> </a></p>
-</div>
-<div class="body">
-<a href="./Writings/Stay abroad/stay abroad.html">
-<h3 class="no-anchor listing-title">
-Being a student far away: what doesn’t fit in a suitcase
-</h3>
-<div class="listing-subtitle">
 
-</div>
-<div class="listing-description">
-When I decided to study abroad, I packed my suitcases with great enthusiasm, happy to be able to complete a journey that I had long awaited.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./Writings/Stay abroad/stay abroad.html">
-<div class="listing-date">
-Apr 19, 2025
-</div>
-</a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -441,7 +415,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://www.quarto.org">Built with Quarto | R Studio</a>
+    <a class="nav-link" href="https://www.quarto.org">Built with Quarto | RStudio</a>
   </li>  
 </ul>
     </div>   

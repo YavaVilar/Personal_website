@@ -19,7 +19,7 @@ website:
   page-footer:
     left:
       - href: https://www.quarto.org
-        text: Built with Quarto | R Studio
+        text: Built with Quarto | RStudio
 
 format:
   html:
