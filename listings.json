@@ -16,6 +16,7 @@
   {
     "listing": "/academic works.html",
     "items": [
+      "/posts/NLP Python/NLP.html",
       "/posts/Séries temporelles multivariées/Séries multivariées.html",
       "/posts/Panel/Panel.html",
       "/posts/Penalized regressions/Penalized Regressions.html",
@@ -31,6 +32,7 @@
   {
     "listing": "/R.html",
     "items": [
+      "/R/NLP/NLP code.html",
       "/R/SVM Python/SVM code.html",
       "/R/Python/Python Dash.html",
       "/R/TD1/TD1.html",

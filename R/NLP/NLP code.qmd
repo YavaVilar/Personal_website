@@ -1,0 +1,7 @@
+---
+title: "Python (NLP) : Can we distinguish AI from human writing?"
+date: "05/17/2025"
+author: Jasmine, Emma, Valorys, Yava
+---
+
+You can access Python [code](https://github.com/YavaVilar/SVM/blob/main/Code%20NLP.ipynb) of our project "Can we distinguish AI from human writing?.
