@@ -5,11 +5,13 @@ toc: true
 date: 06/03/2024
 ---
 
+## Short synthesis of the main results of the project 
+
 Earthquakes, being one of the most devastating natural phenomena on Earth, can cause great damage to human health, fostering, in addition to numerous emotional damages, the emergence of diseases. Among them, cough can reduce the quality of life of those who suffer from it, and its frequency in the population may increase after such an event, given the resulting dust and pollution, the loss of economic means and the worsening of the quality and quantity of clinical services available, among others.
 
 On the other hand, Nepal is an underdeveloped country where many children still do not have access to decent and dignified living conditions, and its frequent exposure to earthquakes aggravate these issues. Children under five represent a group of individuals in society who are particularly susceptible to diseases, while their physical and emotional well-being is essential for their development as individuals. The analysis seeks to identify the extent of damage caused, in terms of prevalence of childhood coughing, by the 2015 Nepal Gorkha earthquake.
 
-Below you can find a synthesis of my project.
+This earthquake, which struck on April 25, 2015, had a magnitude of 7.8 and caused massive destruction and loss of life across central Nepal. It resulted in nearly 9,000 deaths and over 22,000 injuries, while economic losses were estimated at around \$7 billion USD, equivalent to about one-third of Nepal’s GDP at the time.
 
 ### Data
 

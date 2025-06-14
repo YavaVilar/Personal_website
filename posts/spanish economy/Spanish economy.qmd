@@ -7,7 +7,7 @@ toc: true
 
 ### Abstract
 
-Technology is rapidly growing and bringing innovations to society. While these advancements benefit us in many ways—such as through medical breakthroughs, task facilitation, faster communication, and improved transportation—they also raise concerns about the unemployment they might cause if human labor is replaced.
+Technology is rapidly growing and bringing innovations to society. While these advancements benefit us in many ways - such as through medical breakthroughs, task facilitation, faster communication, and improved transportation - they also raise concerns about the unemployment they might cause if human labor is replaced.
 
 The book *The Era of Digital Disruption* by Javier Andrés and Rafael Doménech is one of many that explore how the digital revolution is transforming the economy and work. The authors analyze how technology has radically changed the way we consume, produce, behave, and how this transformation affects productivity and employment.
 

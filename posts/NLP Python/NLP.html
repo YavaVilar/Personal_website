@@ -65,10 +65,10 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Can we distinguish AI from human writing?">
 <meta property="og:description" content="">
-<meta property="og:image" content="AI-human.jpg">
+<meta property="og:image" content="robot.png">
 <meta name="twitter:title" content="Can we distinguish AI from human writing?">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="AI-human.jpg">
+<meta name="twitter:image" content="robot.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -87,10 +87,6 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="../../academic works.html" rel="" target="">
  <span class="menu-text">Academic projects</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../R.html" rel="" target="">
- <span class="menu-text">R &amp; Python</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -150,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>In recent years, tools like ChatGPT have made it increasingly common to generate texts using artificial intelligence. This raises the question of whether it is possible to distinguish between human-written and machine-generated text. While in some cases it might be difficult to answer this question based on human judgment alone, natural language processing (NLP) techniques and machine learning models can be trained to learn from the discrepancies between human- and AI-written texts, and then classify and predict the likelihood that a given text was produced by a non-human author. To achieve this, it is necessary to have a dataset containing essay excerpts that we can confidently attribute to either source. Access to <a href="NLP.pdf">full analysis</a>.</p>
+<p>In recent years, the emergence of tools like ChatGPT have made it increasingly common to generate texts using artificial intelligence. This raises the question of whether it is possible to distinguish between human-written and machine-generated text. While in some cases it might be difficult to answer this question based on human judgment alone, natural language processing (NLP) techniques and machine learning models can be trained to learn from the discrepancies between human- and AI-written texts, and then classify and predict the likelihood that a given text was produced by a non-human author. To achieve this, it is necessary to have a dataset containing essay excerpts that we can confidently attribute to either source. Access to <a href="NLP.pdf">full analysis</a> and to Python <a href="https://github.com/YavaVilar/SVM/blob/main/Code%20NLP.ipynb">code</a>.</p>
 <section id="data-and-preprocessing" class="level4">
 <h4 class="anchored" data-anchor-id="data-and-preprocessing">Data and Preprocessing</h4>
 <p>The analysis was conducted on a dataset from Kaggle, containing 10,000 short English texts. Each entry was labeled with a binary variable: generated = 1 for AI-generated text and 0 for human-written. In order to analyze the data, the texts underwent some necessary standard preprocessing steps:</p>
