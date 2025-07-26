@@ -100,9 +100,9 @@
   {
     "objectID": "about me.html",
     "href": "about me.html",
-    "title": "About me",
+    "title": "Yava Vilar Valera",
     "section": "",
-    "text": "Born in Valencia, Spain, I grew up in Navaluenga, a small village in the province of Ávila, Spain. I later moved to Belgium where I lived for three years and learned French. In 2020, I began my degree in Economics at the Universitat de València. Two years later I enrolled in an International Double Degree program with Nantes Université. This unique opportunity allowed me to obtain my Bachelor in Economics from both universities in 2024.\nCurrently, I am pursuing a Master’s degree in Econometrics and Statistics at Nantes University, where I have acquired extensive skills in data management and coding, in addition to enhancing my statistical abilities to analyze economic issues.\nI define myself as a very passionate and motivated student, with a strong willingness to learn and achieve new goals. Not only do I like addressing questions of social and economic nature, but also writing and engaging in thorough and creative work. My academic and international experiences have shaped my global perspective and sparked a deep curiosity about the world. This drives my interest in working on global challenges.\nYou can find a version of my CV here. Feel free to contact me at vilarvaleray@gmail.com, I am always happy to discuss :-)"
+    "text": "Born in Valencia, Spain, I grew up in Navaluenga, a small village in the province of Ávila, Spain. I later moved to Belgium where I lived for three years and learned French. In 2020, I began my degree in Economics at the Universitat de València. Two years later I enrolled in an International Double Degree program with Nantes Université. This unique opportunity allowed me to obtain my Bachelor in Economics from both universities in 2024.\nCurrently, I am pursuing a Master’s degree in Econometrics and Statistics at Nantes University, where I have acquired extensive skills in data management and coding, in addition to enhancing my statistical abilities to analyze economic issues.\nI define myself as a very passionate and motivated student, with a strong willingness to learn and achieve new goals. Not only do I like addressing questions of social and economic nature, but also writing and engaging in thorough and creative work. My academic and international experiences have shaped my global perspective and sparked a deep curiosity about the world. This drives my interest in working on global challenges.\nOutside of academia, I enjoy dancing (bachata & salsa), reading books, and nature-related activities.\nFeel free to contact me at vilarvaleray@gmail.com, I am always happy to discuss :-)"
   },
   {
     "objectID": "about me.html#about-me",
@@ -453,5 +453,68 @@
     "title": "Master’s Thesis: Assessing the Impact of the Nepal 2015 Gorkha Earthquake on Children’s Health",
     "section": "",
     "text": "Earthquakes, being one of the most devastating natural phenomena on Earth, can cause great damage to human health, fostering, in addition to numerous emotional damages, the emergence of diseases. Among them, cough can reduce the quality of life of those who suffer from it, and its frequency in the population may increase after such an event, given the resulting dust and pollution, the loss of economic means and the worsening of the quality and quantity of clinical services available, among others.\nOn the other hand, Nepal is an underdeveloped country where many children still do not have access to decent and dignified living conditions, and its frequent exposure to earthquakes aggravate these issues. Children under five represent a group of individuals in society who are particularly susceptible to diseases, while their physical and emotional well-being is essential for their development as individuals. The analysis seeks to identify the extent of damage caused, in terms of prevalence of childhood coughing, by the 2015 Nepal Gorkha earthquake.\nThis earthquake, which struck on April 25, 2015, had a magnitude of 7.8 and caused massive destruction and loss of life across central Nepal. It resulted in nearly 9,000 deaths and over 22,000 injuries, while economic losses were estimated at around $7 billion USD, equivalent to about one-third of Nepal’s GDP at the time.\n\n\nData were sourced from Demographic and Health Surveys (DHS), a set of nationally representative surveys that collect information on health and demographics in developing countries. Conducted by ICF International and funded primarily by the United States Agency for International Development (USAID), these surveys address topics such as infant mortality, nutrition, reproductive health, and family planning, providing detailed and internationally comparable information. DHS contain several data files for different family members, such as woman, man, children, and households as a whole. In the analysis, children and households’ files regarding the country of Nepal for the years 2011 (5,038 observations) and 2016 (5,306 observations) are managed. Additionally, geographic coordinates of each surveyed household were required to compute distances to the earthquake’s epicenters, a key aspect of the research. Geospatial data have also been included to specify control variables in the model.\n\n\n\nThe Difference-in-Differences is an econometric technique used to estimate the causal effect of an intervention or policy by comparing changes in outcomes over time between a treatment group, made up of units who receive the intervention, and a control group that serves as counterfactual for treated individuals (i.e. what would have happened to the treatment group in the absence of the intervention). In this case, the earthquake is interpreted as the intervention. Therefore, we consider that individuals under the treatment are children living in areas close to epicentres, whereas the control set is composed of children who live in remote areas. The impact on cough prevalence was measured considering as treated the children living within a wide range of kilometres of either of the two major epicenters (Gorkha district on 15 April, 7,8 magnitude; and Dolakha district, on 12 may, 7,3 magnitude), with the remaining area of the country as control units, the main results of which will be shown below. The mathematical equation is presented next:\nYit = α + β1𝑇𝑟𝑒𝑎𝑡𝑚𝑒𝑛𝑡𝑖 + β2𝑃𝑜𝑠𝑡𝑡 + β3 (Treatment ∗ Post) 𝑖𝑡 + β4X𝑖𝑡 + β5D𝑖𝑡 + ϵ\nWhere 𝑌 reflects the outcome of interest (cough prevalence) for individual 𝑖 at time 𝑡; α is a constant; β the coefficient of each correspondent variable; 𝑇𝑟𝑒𝑎𝑡𝑚𝑒𝑛𝑡 indicates whether the child belongs to the treatment group (1 if that is the case, 0 otherwise); and 𝑃𝑜𝑠𝑡 takes the value 1 if individuals belong to the post-earthquake period, 0 if not. X corresponds to a set of control variables and D represents region fixed effects. Finally, ϵ is the error term.\n\n\n\nFindings have demonstrated a significant impact up to a distance of 80 kilometers. Table 1 presents the estimates obtained from the above equation considering this distance range. β3 , the coefficient corresponding to the variable Treatment*After, is the DiD estimator which measures the causal effect of the treatment. Its significance at the 10% threshold indicates a significant difference, over the two periods analyzed, in the cough rate in the areas affected by the earthquake relative to non-affected regions. The positiveness of the sign indicates that being within 80 kilometers in the post-treatment group increases the likelihood of coughing compared to the remaining areas.\n\n\n\n\n\nFigure 1 shows the evolution of cough prevalence in both treatment and control groups from the year 2001. We can observe how the cough incidence index, measured from 0 to 1 as a proportion of the sample analyzed, has decreased for both groups in the ten years prior to the earthquake, although it increased slowly in 2011 relative to 2006. After the shock in 2015, the proportion of children suffering from the disease goes up, even if not in a very pronounced way, for treated children. The control region, on the contrary, slightly lowers its cough incidence. The groups compared do not perfectly exhibit parallel trends during the pre-earthquake period, although they are similar. Even though covariates have been included in the model, possibly they would not have followed an exactly parallel evolution had the earthquake not taken place, and this could represent some source of little bias in the results. Figure 2 exhibits a map of Nepal showing the two major epicenters as well as the households surveyed who have been found to be injured by the earthquake.\n\n\n\n\nIn conclusion, the study has analyzed the impact that the 2015 Gorkha earthquake of Nepal had on cough prevalence in children under five. For that, children close to epicenters have been compared to the remaining regions of the country over time. Results have revealed an increase in the rate of the disease in areas within a circle of up to 80 kilometers of any of the two major epicenters. Given the frequency of earthquakes in Nepal and its low buildings construction quality, it is recommended to invest in resistant material to these hazards. Likewise, the importance of counting with health services and qualified professionals after such an event is highlighted. Children are the future of society, and their care is crucial for their development and happiness."
+  },
+  {
+    "objectID": "CV.html",
+    "href": "CV.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "University of Nantes — 2023 – Present\n\n\n\nUniversity of Valencia & University of Nantes — 2020 – 2024\n- International double degree\n- High Achievement Group (ARA) at the University of Valencia, taught in English\n\n\n\n\n\n\nMarch 2025 – Present\nSupervisor: Bastien Michel\nResearch on primary school enrollment rates in Sub-Saharan Africa\nDrafting policy briefs based on RCT data\n\n\n\nApril 2025 – June 2025\nSupervisors: Marion Goussé and Hélène Le Forner\nRCT-style evaluation of a perinatal monitoring system in Nantes\nAssisted in the preparatory phase of the fieldwork; survey programming (Qualtrics); literature reviews\n\n\n\nApril 2024 – July 2024 link\nSupervisor: Camille Aït-Youcef\nProject on financial regulation and raw material markets\nTasks: data cleaning, analysis, and econometric modeling (R)\n\n\n\n\nInternational Student Tutor (2021–2022, 2024–2025) – Supporting international students\nInternational Ambassador (March 2024) – Cultural exchange presentation in France\n\n\n\nInternational Double Degree Scholarship – Bank of Santander (2023–2024)\nMerit-based Erasmus Scholarship – Generalitat Valenciana (2022–2023)\nErasmus Scholarship – European Union & University of Valencia (2022–2023)\nUndergraduate Scholarship – Ministry of Education, Spain (2020–2024)\n\n\n\nAcademic: Advanced Econometrics, Public Policy Evaluation, Machine Learning, Natural Language Processing, Time Series, Panel Data, Spatial Econometrics & Cartography\nSoft Skills: Adaptability, Autonomy, Creativity, Critical Thinking, Organization, Teamwork\nTechnical: R, Python, LaTeX (Advanced); Stata (Intermediate); SAS, Power BI, QGIS (Basic)\nLanguages: Spanish (Native) French (Fluent) English (C1 CAE) Catalan (Advanced)\n\n\n\nBastien Michel\nAssistant Professor of Economics, University of Nantes\nbastien.michel@univ-nantes.fr\nOlivier Darné Full Professor of Economics, University of Nantes\nolivier.darne@univ-nantes.fr"
+  },
+  {
+    "objectID": "CV.html#doctorado-en-estadística",
+    "href": "CV.html#doctorado-en-estadística",
+    "title": "Curriculum Vitae",
+    "section": "Doctorado en Estadística",
+    "text": "Doctorado en Estadística\nUniversidad de X – 2020-2024"
+  },
+  {
+    "objectID": "CV.html#licenciatura-en-matemáticas",
+    "href": "CV.html#licenciatura-en-matemáticas",
+    "title": "Curriculum Vitae",
+    "section": "Licenciatura en Matemáticas",
+    "text": "Licenciatura en Matemáticas\nUniversidad de Y – 2015-2020"
+  },
+  {
+    "objectID": "CV.html#education",
+    "href": "CV.html#education",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "University of Nantes — 2023 – Present\n\n\n\nUniversity of Valencia & University of Nantes — 2020 – 2024\n- International double degree\n- High Achievement Group (ARA) at the University of Valencia, taught in English"
+  },
+  {
+    "objectID": "CV.html#professional-experience",
+    "href": "CV.html#professional-experience",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "March 2025 – Present\nSupervisor: Bastien Michel\nResearch on primary school enrollment rates in Sub-Saharan Africa\nDrafting policy briefs based on RCT data\n\n\n\nApril 2025 – June 2025\nSupervisors: Marion Goussé and Hélène Le Forner\nRCT-style evaluation of a perinatal monitoring system in Nantes\nAssisted in the preparatory phase of the fieldwork; survey programming (Qualtrics); literature reviews\n\n\n\nApril 2024 – July 2024 link\nSupervisor: Camille Aït-Youcef\nProject on financial regulation and raw material markets\nTasks: data cleaning, analysis, and econometric modeling (R)"
+  },
+  {
+    "objectID": "CV.html#initiatives-volunteering",
+    "href": "CV.html#initiatives-volunteering",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "International Student Tutor (2021–2022, 2024–2025) – Supporting international students\nInternational Ambassador (March 2024) – Cultural exchange presentation in France"
+  },
+  {
+    "objectID": "CV.html#scholarships-awards",
+    "href": "CV.html#scholarships-awards",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "International Double Degree Scholarship – Bank of Santander (2023–2024)\nMerit-based Erasmus Scholarship – Generalitat Valenciana (2022–2023)\nErasmus Scholarship – European Union & University of Valencia (2022–2023)\nUndergraduate Scholarship – Ministry of Education, Spain (2020–2024)"
+  },
+  {
+    "objectID": "CV.html#skills",
+    "href": "CV.html#skills",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Academic: Advanced Econometrics, Public Policy Evaluation, Machine Learning, Natural Language Processing, Time Series, Panel Data, Spatial Econometrics & Cartography\nSoft Skills: Adaptability, Autonomy, Creativity, Critical Thinking, Organization, Teamwork\nTechnical: R, Python, LaTeX (Advanced); Stata (Intermediate); SAS, Power BI, QGIS (Basic)\nLanguages: Spanish (Native) French (Fluent) English (C1 CAE) Catalan (Advanced)"
+  },
+  {
+    "objectID": "CV.html#references",
+    "href": "CV.html#references",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Bastien Michel\nAssistant Professor of Economics, University of Nantes\nbastien.michel@univ-nantes.fr\nOlivier Darné Full Professor of Economics, University of Nantes\nolivier.darne@univ-nantes.fr"
   }
 ]

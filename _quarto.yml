@@ -10,10 +10,9 @@ website:
         foreground: "#FFFFFF"
         right:
          - href: about me.qmd
-         - icon: linkedin
-         - href: https://www.linkedin.com/in/yava-vilar-valera-496999271/
         left:
          - href: academic works.qmd
+         - href: CV.qmd
 
   page-footer:
     left:

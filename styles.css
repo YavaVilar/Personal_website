@@ -76,3 +76,11 @@ a.sidebar-item-text.sidebar-link {
 .quarto-listing-category-title {
     font-family: "Crimson Text";
 }
+
+.cv-section {
+  background-color: #fff5f5;        /* Suave rosado */
+  padding: 1rem;
+  border-left: 4px solid #cc0000;   /* Rojo profundo */
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}

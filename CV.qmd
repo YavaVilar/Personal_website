@@ -1,0 +1,82 @@
+---
+title: "Curriculum Vitae"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    theme: trestles
+    css: styles.css  # Opcional para estilizar
+page-layout: full
+---
+
+::: {.cv-section}
+
+## Education
+
+#### MSc in Econometrics and Statistics  
+**University of Nantes** — *2023 – Present*  
+
+
+#### BSc in Economics  
+**University of Valencia & University of Nantes** — *2020 – 2024*  
+- International double degree  
+- High Achievement Group (ARA) at the University of Valencia, taught in English
+
+## Professional Experience
+
+#### Research Assistant – University of Nantes  
+**March 2025 – Present**  
+Supervisor: Bastien Michel  
+Paper in progress on primary school enrollment rates in Sub-Saharan Africa  
+Drafting of a policy brief based on RCT data [Mesure du développement de 
+la petite enfance en Côte d'Ivoire](Rapport IDELA.pdf)
+
+#### Research Assistant – University of Rennes  
+**April 2025 – June 2025**  
+Supervisors: Marion Goussé and Hélène Le Forner  
+RCT-style evaluation of a perinatal monitoring system in Nantes  
+Assisted in the preparatory phase of the fieldwork; survey programming (Qualtrics); literature reviews 
+
+#### Internship in Applied Economics and Data Science – University of Nantes  
+**April 2024 – July 2024** [link](Stage-LEMNA (2024).pdf)
+
+Supervisor: Camille Aït-Youcef  
+Project on financial regulation and raw material markets  
+Tasks: data cleaning, analysis, and econometric modeling (R)
+
+## Initiatives & Volunteering
+
+International Student Tutor (2021–2022, 2024–2025) – Supporting international students  
+International Ambassador (March 2024) – Cultural exchange presentation in France
+
+
+## Scholarships & Awards
+
+International Double Degree Scholarship – Bank of Santander (2023–2024)  
+Merit-based Erasmus Scholarship – Generalitat Valenciana (2022–2023)  
+Erasmus Scholarship – European Union & University of Valencia (2022–2023)  
+Undergraduate Scholarship – Ministry of Education, Spain (2020–2024)
+
+
+## Skills
+
+Academic:  Advanced Econometrics, Public Policy Evaluation, Machine Learning, Natural Language Processing, Time Series, Panel Data, Spatial Econometrics & Cartography
+
+Soft Skills:  Adaptability, Autonomy, Creativity, Critical Thinking, Organization, Teamwork
+
+Technical:  R, Python, LaTeX (Advanced);   Stata (Intermediate); SAS, Power BI, QGIS (Basic)
+
+Languages: Spanish (Native)  French (Fluent)  English ([C1 CAE](C1 English.pdf))   Catalan (Advanced)
+
+
+## References
+
+Bastien Michel  
+Assistant Professor of Economics, University of Nantes  
+[bastien.michel@univ-nantes.fr](mailto:bastien.michel+site@univ-nantes.fr)
+
+Olivier Darné 
+Full Professor of Economics, University of Nantes  
+[olivier.darne@univ-nantes.fr](mailto:olivier.darne+site@univ-nantes.fr) 
+
+:::
