@@ -1,0 +1,15 @@
+---
+title: "Modelling the volatility of Accor S.A.'s asset"
+image: "hotel.jpg"
+toc: true
+date: 03/11/2025
+---
+
+This study analyzes the volatility of the French hospitality company Accor S.A.'s stock over the period 2018–2023. Using an econometric approach, it begins with an exploratory analysis of stock returns, highlighting significant conditional heteroskedasticity and fat tails in the return distribution. Several volatility models are tested - GARCH, GJR-GARCH, IGARCH, and RiskMetrics - under both the normal and Student's t-distributions. Model performance is evaluated using goodness-of-fit criteria (log-likelihood, AIC, HQ) and diagnostic tests on residuals. The RiskMetrics model based on the Student's t-distribution proves to be the most suitable for capturing the volatility dynamics, especially during periods of extreme shocks (e.g., COVID-19, war in Ukraine). Finally, forecasts for the year 2023 confirm the predictive robustness of the chosen model, although statistical tests reveal no significant differences in predictive accuracy among the evaluated models.
+
+[Project](Dossier Econométrie Financière_VILAR VALERA Yava.pdf)
+
+<object data="(Dossier Econométrie Financiere_VILAR VALERA Yava.pdf" type="application/pdf" width="100%" height="100%" style="min-height:50vh;">
+
+</object>
+

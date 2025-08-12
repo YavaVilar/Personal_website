@@ -9,10 +9,10 @@ website:
         background: "black"
         foreground: "#FFFFFF"
         right:
+         - href: CV.qmd
          - href: about me.qmd
         left:
          - href: academic works.qmd
-         - href: CV.qmd
 
   page-footer:
     left:

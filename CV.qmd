@@ -3,7 +3,7 @@ title: "Curriculum Vitae"
 format:
   html:
     toc: true
-    toc-depth: 2
+    toc-depth: 3
     theme: trestles
     css: styles.css  # Opcional para estilizar
 page-layout: full
@@ -26,8 +26,8 @@ page-layout: full
 
 #### Research Assistant – University of Nantes
 
-**March 2025 – Present**\
-Supervisor: Bastien Michel\
+**March 2025 – July 2025** [link](Attestation de stage - LEMNA 2025.pdf)\
+Supervisor: Bastien Michel
 Paper in progress on primary school enrollment rates in Sub-Saharan Africa\
 Drafting of a [policy brief](Rapport%20IDELA.pdf) based on RCT data 
 
@@ -68,12 +68,4 @@ Technical: R, Python, LaTeX (Advanced); Stata (Intermediate); SAS, Power BI, QGI
 
 Languages: Spanish (Native) French (Fluent) English ([C1 CAE](C1%20English.pdf)) Catalan (Advanced)
 
-## References
-
-Bastien Michel\
-Assistant Professor of Economics, University of Nantes\
-[bastien.michel\@univ-nantes.fr](mailto:bastien.michel+site@univ-nantes.fr)
-
-Olivier Darné Full Professor of Economics, University of Nantes\
-[olivier.darne\@univ-nantes.fr](mailto:olivier.darne+site@univ-nantes.fr)
 :::
