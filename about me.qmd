@@ -1,6 +1,6 @@
 ---
 title: "Yava Vilar Valera"
-image: "foto gradu.png"
+image: "Yava.jpeg"
 about:
   template: trestles
   links:
@@ -11,13 +11,12 @@ about:
 ---
 
 ::: column-page
-Born in Valencia, Spain, I grew up in Navaluenga, a small village in the province of Ávila, Spain. I later moved to Belgium where I lived for three years and learned French. In 2020, I began my degree in Economics at the [Universitat de València](https://www.uv.es/). Two years later I enrolled in an International Double Degree program with [Nantes Université](https://www.univ-nantes.fr/). This unique opportunity allowed me to obtain my Bachelor in Economics from both universities in 2024.
 
-Currently, I am pursuing a Master's degree in [Econometrics and Statistics](https://sites.google.com/view/master-ecap/accueil) at Nantes University, where I have acquired extensive skills in data management and coding, in addition to enhancing my statistical abilities to analyze economic issues.
+Hi! I am an MSc graduate in Econometrics from the [University of Nantes](https://www.univ-nantes.fr/), with a BSc in Economics from both the [University of Nantes](https://www.univ-nantes.fr/) and the [Universitat de València](https://www.uv.es/). 
 
-I define myself as a very passionate and motivated student, with a strong willingness to learn and achieve new goals. Not only do I like addressing questions of social and economic nature, but also writing and engaging in thorough and creative work. My academic and international experiences have shaped my global perspective and sparked a deep curiosity about the world. This drives my interest in working on global challenges.
+I am passionate about exploring how economics and data can help us understand society and tackle today's pressing issues. I enjoy not only addressing questions of social and economic nature, but also writing and engaging in thorough and creative work. My academic and international experiences have shaped my global perspective and sparked a deep curiosity about the world. Throughout my studies, I developed skills in econometric modeling and data analysis, and I am particularly interested in applying them to challenges such as poverty and inequality.
 
 Outside of academia, I like dancing (bachata and salsa), nature-related activities (mountains, beach), and reading books (philosophy, psychology). 
 
-Feel free to contact me at [vilarvaleray@gmail.com](mailto:vilarvaleray+site@gmail.com), I am always happy to discuss :-) 
+Feel free to reach me out at [vilarvaleray@gmail.com](mailto:vilarvaleray+site@gmail.com) would you like to connect. 
 :::
